@@ -17,13 +17,13 @@ echo "Configuring TDB server"
 sh TerracottaDBConfigure.sh
 echo "Configured TDB server"
 echo "Copying assets to CC Docker container"
-docker cp /home/saguser/mosy/bpm/Assets/workspace/HelloDBPAssetsDeployScenario/ bpm_cc_1:/opt/
+docker cp ./AssetDeploymentAssets/ bpm_cc_1:/opt/
 echo "Copying assets to CC Docker container Done"
 echo "Register assets to CC from GitHub"
-docker exec -i bpm_cc_1 ant AddGitRepo -buildfile /opt/HelloDBPAssetsDeployScenario/build.xml test -Dasset.repo=assets-HelloDBP
+docker exec -i bpm_cc_1 ant AddGitRepo -buildfile /opt/AssetDeploymentAssets/build.xml test -Dasset.repo=assets-HelloDBP
 echo "Registed assets to CC from GitHub"
 echo "Deploy assets to IS"
-if docker exec -i bpm_cc_1 ant deployToCIIS -buildfile /opt/HelloDBPAssetsDeployScenario/build.xml -Dasset.repo=assets-HelloDBP;then
+if docker exec -i bpm_cc_1 ant deployToCIIS -buildfile /opt/AssetDeploymentAssets/build.xml -Dasset.repo=assets-HelloDBP;then
         echo "Deployed assets to IS"
 else
         echo "Failed to deploy IS assets"
