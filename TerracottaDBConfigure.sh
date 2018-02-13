@@ -1,1 +1,1 @@
-docker exec -i bpm_dev1_1 /opt/softwareag/TerracottaDB/tools/cluster-tool/bin/cluster-tool.sh configure -n local -l /opt/softwareag/TerracottaDB/TerracottaDB101.xml -s localhost:9410
+docker exec -i hellodbp_dev1_1 /opt/softwareag/TerracottaDB/tools/cluster-tool/bin/cluster-tool.sh configure -n local -l /opt/softwareag/TerracottaDB/TerracottaDB101.xml -s localhost:9410
