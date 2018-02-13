@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="svc_type">AdapterService</value>
+  <value name="svc_subtype">unknown</value>
+  <value name="svc_sigtype">unknown</value>
+  <record name="svc_sig" javaclass="com.wm.util.Values">
+    <record name="sig_in" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="field_name">CustomSelectInput</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="nillable">true</value>
+      <array name="rec_fields" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="field_name">CustomSelectInput</value>
+          <value name="field_type">record</value>
+          <value name="field_dim">0</value>
+          <value name="nillable">true</value>
+          <array name="rec_fields" type="record" depth="1">
+          </array>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="field_name">$connectionName</value>
+          <value name="field_type">string</value>
+          <value name="field_dim">0</value>
+          <value name="field_opt">true</value>
+          <value name="nillable">false</value>
+        </record>
+      </array>
+    </record>
+    <record name="sig_out" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="field_name">CustomSelectOutput</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="nillable">true</value>
+      <array name="rec_fields" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="field_name">CustomSelectOutput</value>
+          <value name="field_type">record</value>
+          <value name="field_dim">0</value>
+          <value name="nillable">true</value>
+          <array name="rec_fields" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">record</value>
+              <value name="field_name">results</value>
+              <value name="field_type">record</value>
+              <value name="field_dim">1</value>
+              <value name="nillable">true</value>
+              <array name="rec_fields" type="record" depth="1">
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">BFILE_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">BINARYDOUBLE_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">BINARYFLOAT_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">CHAR_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">CHARACTER_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">DATE_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.util.Date</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">DEC_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.math.BigDecimal</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">DECIMAL_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.math.BigDecimal</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">DOUBLEPRECISION_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.lang.Double</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">FLOAT_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.lang.Double</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">INT_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.math.BigDecimal</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">INTEGER_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.math.BigDecimal</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">INTERVALDAYTOSECOND_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">INTERVALYEARTOMONTH_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">LONG_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">NCHAR_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">NCLOB_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">NUMBER_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.math.BigDecimal</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">NVARCHAR2_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">RAW_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">REAL_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.lang.Double</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">ROWID_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">SMALLINT_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="wrapper_type">java.math.BigDecimal</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">TIMESTAMP_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">TIMESTAMPWITHLOCALTIMEZONE_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">TIMESTAMPWITHTIMEZONE_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">UROWID_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">VARCHAR2_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">BLOB_COL</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">unknown</value>
+                  <value name="field_name">CLOB_COL</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="nillable">true</value>
+                </record>
+              </array>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">unknown</value>
+              <value name="field_name">result</value>
+              <value name="field_type">object</value>
+              <value name="field_dim">0</value>
+              <value name="wrapper_type">java.lang.Integer</value>
+              <value name="nillable">true</value>
+            </record>
+          </array>
+        </record>
+      </array>
+    </record>
+  </record>
+  <value name="stateless">no</value>
+  <value name="caching">no</value>
+  <value name="prefetch">no</value>
+  <value name="cache_ttl">15</value>
+  <value name="prefetch_level">1</value>
+  <value name="audit_level">off</value>
+  <value name="check_internal_acls">no</value>
+  <value name="icontext_policy">$null</value>
+  <value name="system_service">no</value>
+  <value name="retry_max">0</value>
+  <value name="retry_interval">0</value>
+  <value name="svc_in_validator_options">none</value>
+  <value name="svc_out_validator_options">none</value>
+  <value name="auditoption">0</value>
+  <record name="auditsettings" javaclass="com.wm.util.Values">
+    <value name="document_data">0</value>
+    <value name="startExecution">false</value>
+    <value name="stopExecution">false</value>
+    <value name="onError">true</value>
+  </record>
+  <value name="node_type">service</value>
+  <value name="IRTNODE_VERSION">1</value>
+  <value name="IRTNODE_PROPERTY">CwQAAAABBQEEGQBjAG8AbQAuAHcAbQAuAGQAYQB0AGEALgBJAFMATQBlAG0ARABhAHQAYQBJAG0AcABsBBMAcwBlAHIAdgBpAGMAZQBUAGUAbQBwAGwAYQB0AGUATgBhAG0AZQQoAGMAbwBtAC4AdwBtAC4AYQBkAGEAcAB0AGUAcgAuAHcAbQBqAGQAYgBjAC4AcwBlAHIAdgBpAGMAZQBzAC4AQwB1AHMAdABvAG0AUwBRAEwEDgBjAG8AbgBuAGUAYwB0AGkAbwBuAE4AYQBtAGUEOgBjAG8AbQAuAHcAZQBiAG0AZQB0AGgAbwBkAHMALgBhAGQAYQBwAHQAZQByAHMALgBqAGQAYgBjAC4AYwBvAG4AbgBlAGMAdABpAG8AbgBzAC4AbwByAGEAYwBsAGUAOgBDAG8AbgBuAGUAYwB0AGkAbwBuBBIAdABlAG0AcABsAGEAdABlAFAAcgBvAHAAZQByAHQAaQBlAHMFAQACBAMAcwBxAGyEAAAByABzAGUAbABlAGMAdAAgAEIARgBJAEwARQBfAEMATwBMACwAIABCAEkATgBBAFIAWQBEAE8AVQBCAEwARQBfAEMATwBMACwAIABCAEkATgBBAFIAWQBGAEwATwBBAFQAXwBDAE8ATAAsACAAQwBIAEEAUgBfAEMATwBMACwAIABDAEgAQQBSAEEAQwBUAEUAUgBfAEMATwBMACwAIAAKACAARABBAFQARQBfAEMATwBMACwAIABEAEUAQwBfAEMATwBMACwAIABEAEUAQwBJAE0AQQBMAF8AQwBPAEwALAAgAEQATwBVAEIATABFAFAAUgBFAEMASQBTAEkATwBOAF8AQwBPAEwALAAgAEYATABPAEEAVABfAEMATwBMACwAIABJAE4AVABfAEMATwBMACwAIABJAE4AVABFAEcARQBSAF8AQwBPAEwALAAgAEkATgBUAEUAUgBWAEEATABEAEEAWQBUAE8AUwBFAEMATwBOAEQAXwBDAE8ATAAsACAACgAgAEkATgBUAEUAUgBWAEEATABZAEUAQQBSAFQATwBNAE8ATgBUAEgAXwBDAE8ATAAsACAATABPAE4ARwBfAEMATwBMACwAIABOAEMASABBAFIAXwBDAE8ATAAsACAATgBDAEwATwBCAF8AQwBPAEwALAAgAE4AVQBNAEIARQBSAF8AQwBPAEwALAAgAE4AVgBBAFIAQwBIAEEAUgAyAF8AQwBPAEwALAAgAFIAQQBXAF8AQwBPAEwALAAgAFIARQBBAEwAXwBDAE8ATAAsACAACgAgAFIATwBXAEkARABfAEMATwBMACwAIABTAE0AQQBMAEwASQBOAFQAXwBDAE8ATAAsACAAVABJAE0ARQBTAFQAQQBNAFAAXwBDAE8ATAAsACAAVABJAE0ARQBTAFQAQQBNAFAAVwBJAFQASABMAE8AQwBBAEwAVABJAE0ARQBaAE8ATgBFAF8AQwBPAEwALAAgAFQASQBNAEUAUwBUAEEATQBQAFcASQBUAEgAVABJAE0ARQBaAE8ATgBFAF8AQwBPAEwALAAgAFUAUgBPAFcASQBEAF8AQwBPAEwALAAgAFYAQQBSAEMASABBAFIAMgBfAEMATwBMACwACgAgAEIATABPAEIAXwBDAE8ATAAsACAAQwBMAE8AQgBfAEMATwBMAAoAZgByAG8AbQAgAEEAbABsAFQAeQBwAGUAcwQMAHMAcQBsAEYAaQBlAGwAZABUAHkAcABlBBAAagBhAHYAYQAuAGwAYQBuAGcALgBTAHQAcgBpAG4AZwQNAGkAbgBwAHUAdABKAEQAQgBDAFQAeQBwAGUKAAANBA4AaQBuAHAAdQB0AEYAaQBlAGwAZABUAHkAcABlCgAADQQKAGkAbgBwAHUAdABGAGkAZQBsAGQKAAANBA4AbwB1AHQAcAB1AHQASgBEAEIAQwBUAHkAcABlCh4ADQQFAE8AVABIAEUAUgAaABoEBABDAEgAQQBSAB0EBABEAEEAVABFBAcARABFAEMASQBNAEEATAAgBAUARgBMAE8AQQBUACIAIAAgABoAGgQLAEwATwBOAEcAVgBBAFIAQwBIAEEAUgAaABoAIAAaBAkAVgBBAFIAQgBJAE4AQQBSAFkAIgAaACAAGgAaABoAGgQHAFYAQQBSAEMASABBAFIEBABCAEwATwBCBAQAQwBMAE8AQgQPAG8AdQB0AHAAdQB0AEYAaQBlAGwAZABUAHkAcABlCh4ADQANBBAAagBhAHYAYQAuAGwAYQBuAGcALgBPAGIAagBlAGMAdAA8AA0ADQQOAGoAYQB2AGEALgB1AHQAaQBsAC4ARABhAHQAZQQUAGoAYQB2AGEALgBtAGEAdABoAC4AQgBpAGcARABlAGMAaQBtAGEAbABBBBAAagBhAHYAYQAuAGwAYQBuAGcALgBEAG8AdQBiAGwAZQBDAEEAQQANAA0ADQANAA0AQQANBAoAYgB5AHQAZQAgAGEAcgByAGEAeQBDAA0AQQANADwAPAANAA0ATgANBA8AcgBlAHMAdQBsAHQARgBpAGUAbABkAFQAeQBwAGUKHgANBBIAagBhAHYAYQAuAGwAYQBuAGcALgBTAHQAcgBpAG4AZwBbAF0EEgBqAGEAdgBhAC4AbABhAG4AZwAuAE8AYgBqAGUAYwB0AFsAXQBdAFwAXAQQAGoAYQB2AGEALgB1AHQAaQBsAC4ARABhAHQAZQBbAF0EFgBqAGEAdgBhAC4AbQBhAHQAaAAuAEIAaQBnAEQAZQBjAGkAbQBhAGwAWwBdAGIEEgBqAGEAdgBhAC4AbABhAG4AZwAuAEQAbwB1AGIAbABlAFsAXQBkAGIAYgBcAFwAXABcAFwAYgBcBAwAYgB5AHQAZQAgAGEAcgByAGEAeQBbAF0AZABcAGIAXABdAF0AXABcAG8AXAQLAG8AdQB0AHAAdQB0AEYAaQBlAGwAZAoeAA0ECQBCAEYASQBMAEUAXwBDAE8ATAQQAEIASQBOAEEAUgBZAEQATwBVAEIATABFAF8AQwBPAEwEDwBCAEkATgBBAFIAWQBGAEwATwBBAFQAXwBDAE8ATAQIAEMASABBAFIAXwBDAE8ATAQNAEMASABBAFIAQQBDAFQARQBSAF8AQwBPAEwECABEAEEAVABFAF8AQwBPAEwEBwBEAEUAQwBfAEMATwBMBAsARABFAEMASQBNAEEATABfAEMATwBMBBMARABPAFUAQgBMAEUAUABSAEUAQwBJAFMASQBPAE4AXwBDAE8ATAQJAEYATABPAEEAVABfAEMATwBMBAcASQBOAFQAXwBDAE8ATAQLAEkATgBUAEUARwBFAFIAXwBDAE8ATAQXAEkATgBUAEUAUgBWAEEATABEAEEAWQBUAE8AUwBFAEMATwBOAEQAXwBDAE8ATAQXAEkATgBUAEUAUgBWAEEATABZAEUAQQBSAFQATwBNAE8ATgBUAEgAXwBDAE8ATAQIAEwATwBOAEcAXwBDAE8ATAQJAE4AQwBIAEEAUgBfAEMATwBMBAkATgBDAEwATwBCAF8AQwBPAEwECgBOAFUATQBCAEUAUgBfAEMATwBMBA0ATgBWAEEAUgBDAEgAQQBSADIAXwBDAE8ATAQHAFIAQQBXAF8AQwBPAEwECABSAEUAQQBMAF8AQwBPAEwECQBSAE8AVwBJAEQAXwBDAE8ATAQMAFMATQBBAEwATABJAE4AVABfAEMATwBMBA0AVABJAE0ARQBTAFQAQQBNAFAAXwBDAE8ATAQeAFQASQBNAEUAUwBUAEEATQBQAFcASQBUAEgATABPAEMAQQBMAFQASQBNAEUAWgBPAE4ARQBfAEMATwBMBBkAVABJAE0ARQBTAFQAQQBNAFAAVwBJAFQASABUAEkATQBFAFoATwBOAEUAXwBDAE8ATAQKAFUAUgBPAFcASQBEAF8AQwBPAEwEDABWAEEAUgBDAEgAQQBSADIAXwBDAE8ATAQIAEIATABPAEIAXwBDAE8ATAQIAEMATABPAEIAXwBDAE8ATAQLAHIAZQBzAHUAbAB0AEYAaQBlAGwAZAoeAA0EEwByAGUAcwB1AGwAdABzAFsAXQAuAEIARgBJAEwARQBfAEMATwBMBBoAcgBlAHMAdQBsAHQAcwBbAF0ALgBCAEkATgBBAFIAWQBEAE8AVQBCAEwARQBfAEMATwBMBBkAcgBlAHMAdQBsAHQAcwBbAF0ALgBCAEkATgBBAFIAWQBGAEwATwBBAFQAXwBDAE8ATAQSAHIAZQBzAHUAbAB0AHMAWwBdAC4AQwBIAEEAUgBfAEMATwBMBBcAcgBlAHMAdQBsAHQAcwBbAF0ALgBDAEgAQQBSAEEAQwBUAEUAUgBfAEMATwBMBBIAcgBlAHMAdQBsAHQAcwBbAF0ALgBEAEEAVABFAF8AQwBPAEwEEQByAGUAcwB1AGwAdABzAFsAXQAuAEQARQBDAF8AQwBPAEwEFQByAGUAcwB1AGwAdABzAFsAXQAuAEQARQBDAEkATQBBAEwAXwBDAE8ATAQdAHIAZQBzAHUAbAB0AHMAWwBdAC4ARABPAFUAQgBMAEUAUABSAEUAQwBJAFMASQBPAE4AXwBDAE8ATAQTAHIAZQBzAHUAbAB0AHMAWwBdAC4ARgBMAE8AQQBUAF8AQwBPAEwEEQByAGUAcwB1AGwAdABzAFsAXQAuAEkATgBUAF8AQwBPAEwEFQByAGUAcwB1AGwAdABzAFsAXQAuAEkATgBUAEUARwBFAFIAXwBDAE8ATAQhAHIAZQBzAHUAbAB0AHMAWwBdAC4ASQBOAFQARQBSAFYAQQBMAEQAQQBZAFQATwBTAEUAQwBPAE4ARABfAEMATwBMBCEAcgBlAHMAdQBsAHQAcwBbAF0ALgBJAE4AVABFAFIAVgBBAEwAWQBFAEEAUgBUAE8ATQBPAE4AVABIAF8AQwBPAEwEEgByAGUAcwB1AGwAdABzAFsAXQAuAEwATwBOAEcAXwBDAE8ATAQTAHIAZQBzAHUAbAB0AHMAWwBdAC4ATgBDAEgAQQBSAF8AQwBPAEwEEwByAGUAcwB1AGwAdABzAFsAXQAuAE4AQwBMAE8AQgBfAEMATwBMBBQAcgBlAHMAdQBsAHQAcwBbAF0ALgBOAFUATQBCAEUAUgBfAEMATwBMBBcAcgBlAHMAdQBsAHQAcwBbAF0ALgBOAFYAQQBSAEMASABBAFIAMgBfAEMATwBMBBEAcgBlAHMAdQBsAHQAcwBbAF0ALgBSAEEAVwBfAEMATwBMBBIAcgBlAHMAdQBsAHQAcwBbAF0ALgBSAEUAQQBMAF8AQwBPAEwEEwByAGUAcwB1AGwAdABzAFsAXQAuAFIATwBXAEkARABfAEMATwBMBBYAcgBlAHMAdQBsAHQAcwBbAF0ALgBTAE0AQQBMAEwASQBOAFQAXwBDAE8ATAQXAHIAZQBzAHUAbAB0AHMAWwBdAC4AVABJAE0ARQBTAFQAQQBNAFAAXwBDAE8ATAQoAHIAZQBzAHUAbAB0AHMAWwBdAC4AVABJAE0ARQBTAFQAQQBNAFAAVwBJAFQASABMAE8AQwBBAEwAVABJAE0ARQBaAE8ATgBFAF8AQwBPAEwEIwByAGUAcwB1AGwAdABzAFsAXQAuAFQASQBNAEUAUwBUAEEATQBQAFcASQBUAEgAVABJAE0ARQBaAE8ATgBFAF8AQwBPAEwEFAByAGUAcwB1AGwAdABzAFsAXQAuAFUAUgBPAFcASQBEAF8AQwBPAEwEFgByAGUAcwB1AGwAdABzAFsAXQAuAFYAQQBSAEMASABBAFIAMgBfAEMATwBMBBIAcgBlAHMAdQBsAHQAcwBbAF0ALgBCAEwATwBCAF8AQwBPAEwEEgByAGUAcwB1AGwAdABzAFsAXQAuAEMATABPAEIAXwBDAE8ATAQPAHIAZQBhAGwATwB1AHQAcAB1AHQARgBpAGUAbABkCh4ADQCeAJ8AoAChAKIAowCkAKUApgCnAKgAqQCqAKsArACtAK4ArwCwALEAsgCzALQAtQC2ALcAuAC5ALoAuwQGAG0AYQB4AFIAbwB3BAEAMAQOAHIAZQBzAHUAbAB0AFIAbwB3AEYAaQBlAGwAZAQGAHIAZQBzAHUAbAB0BBIAcgBlAHMAdQBsAHQAUgBvAHcARgBpAGUAbABkAFQAeQBwAGUEEQBqAGEAdgBhAC4AbABhAG4AZwAuAEkAbgB0AGUAZwBlAHIEEABkAGUAcwBpAGcAbgBUAGkAbQBlAEwAbwBjAGEAbABlBAUAZQBuAF8AVQBTAgAEGQBhAGQAYQBwAHQAZQByAFMAZQByAHYAaQBjAGUATgBvAGQAZQBWAGUAcgBzAGkAbwBuCwQAAAACBAsAYQBkAGEAcAB0AGUAcgBUAHkAcABlBAsASgBEAEIAQwBBAGQAYQBwAHQAZQByBA8AaQBuAHAAdQB0AFIAZQBjAG8AcgBkAE4AYQBtAGUEEQBDAHUAcwB0AG8AbQBTAGUAbABlAGMAdABJAG4AcAB1AHQEEABvAHUAdABwAHUAdABSAGUAYwBvAHIAZABOAGEAbQBlBBIAQwB1AHMAdABvAG0AUwBlAGwAZQBjAHQATwB1AHQAcAB1AHQCAA==</value>
+</Values>

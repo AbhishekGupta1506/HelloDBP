@@ -1,0 +1,19 @@
+<project basedir="." default="runISSOAPTestCase" name="FMSAutomation">
+
+	<target name="SoapUI">
+		<exec dir="." executable="/home/saguser/Public/Softwares/SoapUI-5.3.0/bin/testrunner.sh">
+			<arg line="-r -j -f '/home/saguser/Public/Softwares/Jenkins/workspace/cc-deploy-demo/build/tests/default' -s IntegrationServer_TestSuite '/home/saguser/Public/Softwares/Jenkins/workspace/cc-deploy-demo/tests/IntegrationServerTests/IntegrationServer-Test-soapui-project.xml'" />
+		</exec>
+	</target>
+
+
+	<target name="runISSOAPTestCase" depends="SoapUI">
+			<junitreport todir="/home/saguser/Public/Softwares/Jenkins/workspace/cc-deploy-demo/build/tests/default">
+				<fileset dir="/home/saguser/Public/Softwares/Jenkins/workspace/cc-deploy-demo/build/tests/default">
+					<include name="TEST-*.xml" />
+				</fileset>
+				<report todir="/home/saguser/Public/Softwares/Jenkins/workspace/cc-deploy-demo/build/tests/default/HTML">
+				</report>
+			</junitreport>
+	</target>
+</project>		

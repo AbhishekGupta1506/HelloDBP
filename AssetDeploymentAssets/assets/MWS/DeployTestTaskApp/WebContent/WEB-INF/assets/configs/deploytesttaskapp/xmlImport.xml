@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+	<runtime_config appName="DeployTestTaskApp">
+		<contextparams>
+			<entry key="javax.faces.STATE_SAVING_METHOD" value="client" />
+			<entry key="com.webmethods.caf.faces.view.FILTER" value=".*\.view" />
+			<entry key="com.webmethods.caf.faces.view.CACHE" value="true" />
+			<entry key="com.webmethods.caf.faces.context.PRETTY_PRINT"
+				value="false" />
+			<entry key="com.sun.faces.forceLoadConfiguration" value="true" />
+		</contextparams>
+		<enventries>
+			<entry ftype="java.lang.Integer" fvalue="10000"
+				key="wsclient-socketTimeout" />
+			<entry ftype="java.lang.String" fvalue="http://localhost:8585"
+				key="wsclient-endpointAddress" />
+			<entry ftype="java.lang.Boolean" fvalue="true" key="wsclient-requiresAuth" />
+			<entry ftype="java.lang.String" fvalue="1" key="wsclient-authMethod" />
+			<entry ftype="java.lang.String" fvalue="user1" key="wsclient-username" />
+			<entry ftype="java.lang.String" fvalue="{DES}ByZV49D/kg8=" key="wsclient-password" />
+		</enventries>
+	</runtime_config>
+</CONFIG>
+
+

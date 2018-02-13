@@ -1,0 +1,19 @@
+<CONFIG>
+	<CONTEXT alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app">
+		<folder name="DeployTestTask Start" description="DeployTestTask Start" alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app.start.page" isTaskFolder="false">
+			<Mode type="sync">
+	            <page>
+	            	<row>
+	            		<column>
+	            			<deploytesttaskapp___deploytesttaskstart name="Task Start" alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app.start.portlet">
+	                            <layout name="titlebar" value="false"/>
+	                            <layout name="border" value="false"/>            			
+	            			</deploytesttaskapp___deploytesttaskstart>
+	                    </column>
+	                </row>
+	                <hobos/>
+	            </page>
+	        </Mode>
+        </folder>
+    </CONTEXT>
+</CONFIG>

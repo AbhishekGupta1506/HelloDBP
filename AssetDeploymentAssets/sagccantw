@@ -1,0 +1,34 @@
+#!/bin/sh
+###
+# Command Central client tools wrapper
+###
+
+version="10.1"
+maturity="qafix"
+url=http://aquarius-bg.eur.ad.sag/cc/installers
+
+case "`uname`" in
+  Darwin) installer=cc-def-$version-$maturity-osx.sh ;;
+       *) installer=cc-def-$version-$maturity-lnxamd64.sh ;;
+esac
+
+export SAG_HOME="/opt/softwareag"
+export CC_CLI_HOME="$SAG_HOME/CommandCentral/client"
+export JAVA_HOME="$SAG_HOME/jvm/jvm"
+
+if [ ! -f "$CC_CLI_HOME/bin/sagccant" ]; then
+    echo "Software AG tools not found at: $HOME/softwareag folder"
+    mkdir -p "$HOME/Downloads"
+    file="$HOME/Downloads/$installer"
+    if test -e "$file"
+    then zflag="-z '$file'"
+    else zflag=
+    fi
+    echo "Downloading ..."
+    curl -o "$file" $zflag "$url/$installer"
+    chmod +x $file
+    echo "Installing ..."
+    $file -D CLI -L -d "$HOME/softwareag"
+fi
+
+$CC_CLI_HOME/bin/sagccant -Dcc.cli.home=$CC_CLI_HOME $*

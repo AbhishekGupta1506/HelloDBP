@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite xmlns:EventServer="http://namespaces.softwareag.com/webMethods/EventServer" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/Broker" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize" targetNamespace="http://namespaces.softwareag.com/webMethods/Optimize" runtimeVersion="8.2.0.0" displayName="OrderToCashAssetsFull" name="OrderToCashAssetsFull" xmlns="http://namespaces.softwareag.com/acdl/1.0">
+    <buildInfo value="${buildTimestamp}" name="BuildTimestamp"/>
+    <buildInfo value="${buildVersion}" name="BuildVersion"/>
+    <asset isDeployable="true" displayName="OrderToCashView" name="OptimizeCustomTree.OrderToCashView">
+        <implementation.generic type="OptimizeCustomTree"/>
+        <dependsOn>Optimize:OptimizeEventMap.13-1-1294834600563-1</dependsOn>
+    </asset>
+    <asset isDeployable="true" displayName="Branch" name="OptimizeDimension.Branch">
+        <implementation.generic type="OptimizeDimension"/>
+    </asset>
+    <asset isDeployable="true" displayName="Website" name="OptimizeDimension.Website">
+        <implementation.generic type="OptimizeDimension"/>
+        <dependsOn>Optimize:OptimizeILink.13-19-1294834999717-7</dependsOn>
+    </asset>
+    <asset isDeployable="true" displayName="Region" name="OptimizeDimension.Region">
+        <implementation.generic type="OptimizeDimension"/>
+    </asset>
+    <asset isDeployable="true" displayName="OrderToCash" name="OptimizeProcessConfig.OrderToCashProject%2FOrderToCash">
+        <implementation.generic type="OptimizeProcessConfig"/>
+    </asset>
+    <asset isDeployable="true" displayName="OrderToCashHierarchy" name="OptimizeHierarchy.13-3-1294834620923-2">
+        <implementation.generic type="OptimizeHierarchy"/>
+        <dependsOn>Optimize:OptimizeDimension.Branch</dependsOn>
+        <dependsOn>Optimize:OptimizeDimension.Customer</dependsOn>
+        <dependsOn>Optimize:OptimizeDimension.Region</dependsOn>
+    </asset>
+    <asset isDeployable="true" displayName="Customer" name="OptimizeDimension.Customer">
+        <implementation.generic type="OptimizeDimension"/>
+    </asset>
+    <asset isDeployable="true" displayName="OrderToCash_Booked" name="OptimizeEventMap.13-1-1294834600563-1">
+        <implementation.generic type="OptimizeEventMap"/>
+        <dependsOn>Optimize:OptimizeDimension.Branch</dependsOn>
+        <dependsOn>Optimize:OptimizeDimension.Customer</dependsOn>
+        <dependsOn>Optimize:OptimizeDimension.Region</dependsOn>
+        <dependsOn>Optimize:OptimizeDimension.Website</dependsOn>
+        <dependsOn>Optimize:OptimizeEventMap.13-1-1294834600563-1</dependsOn>
+        <dependsOn>Optimize:OptimizeHierarchy.13-3-1294834620923-2</dependsOn>
+    </asset>
+    <asset isDeployable="true" displayName="DataAccessWebServiceLink" name="OptimizeILink.13-19-1294834999717-7">
+        <implementation.generic type="OptimizeILink"/>
+    </asset>
+    <asset isDeployable="true" displayName="SouthRegionFilter" name="OptimizeDataFilter.13-9-1294834851499-5">
+        <implementation.generic type="OptimizeDataFilter"/>
+        <dependsOn>Optimize:OptimizeDimension.Region</dependsOn>
+    </asset>
+    <asset isDeployable="true" displayName="OrderAmountExceededRule" name="OptimizeRule.13-5-1294834938311-6">
+        <implementation.generic type="OptimizeRule"/>
+        <dependsOn>Optimize:OptimizeDataFilter.13-9-1294834851499-5</dependsOn>
+        <dependsOn>Optimize:OptimizeEventMap.13-1-1294834600563-1</dependsOn>
+        <dependsOn>Optimize:OptimizeHierarchy.13-3-1294834620923-2</dependsOn>
+    </asset>
+</asset_composite>

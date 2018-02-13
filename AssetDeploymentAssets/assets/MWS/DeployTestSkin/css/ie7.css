@@ -1,0 +1,50 @@
+/*
+special rules for a special browser: ie7
+*/
+
+/*
+need fixed width on popup menus to prevent them from expanding to full page width
+*/
+.caf-popup-menu {
+	width: 200px;
+}
+.nav-menu {
+    width: 12em;
+}
+
+/*
+portlet body pushes over into right-side margin without this
+*/
+.portlet-body {
+    width: 100%;
+}
+
+/*
+tabs-titlebar hack needs to be pushed slightly less to the right
+*/
+.caf-tabs-titlebar-right {
+    right: -1px;
+}
+
+/*
+prevent tables with width="100%" from spilling over edge of dialog
+also, in rtl mode, table width="100%" pushes the dialog away from its shadow
+*/
+.caf-dialog-content {
+    width: 100%;
+    overflow: auto;
+}
+
+/*
+in quirks-mode spin-buttons are shifted 1em down for ff and 1em up for ie
+*/
+.caf-timepicker .caf-spinbuttons {
+    top: 0.5em;
+}
+
+/*
+make left edge of checkbox line up with left edge of other inputs in property-line
+*/
+.caf-property-line input.caf-checkbox, .caf-property-line input.caf-radio {
+    margin-left: -4px;
+}

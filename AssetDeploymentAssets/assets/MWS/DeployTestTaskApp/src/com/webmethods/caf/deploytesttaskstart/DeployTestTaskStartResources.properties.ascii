@@ -1,0 +1,27 @@
+#Fri Dec 10 15:20:43 PST 2010
+start.task.data.todo=\: TODO\: add your task data fields into this group
+start.task.new.task=New Task
+start.task.return=Return
+start.task.ok=OK
+javax.portlet.preference.name.returnUrl=Finish URL
+start.task.priority=Priority
+start.task.open.task=Open the task.
+javax.portlet.keywords=task,708F0279-CDEC-A308-F018-E90393A483AB,start
+javax.portlet.short-title=DeployTestTaskStart
+start.task.expiration.date=Expiration Date
+start.task.medium=3-Medium 
+start.task.pagebean.task.start.msg=The new task has been successfully started
+start.task.date.format.msg=Please use mm/dd/yyyy format for the date
+start.task.start.task=Start Task
+start.task.name=Name
+start.task.toggle.task.info=Toggle Task Info
+start.task.custom.task.id=Custom Task ID
+start.task.low=4-Low 
+start.task.none=None 
+start.task.description=Description
+javax.portlet.title=DeployTestTask Start
+javax.portlet.preference.description.returnUrl=
+start.task.pagebean.task.is.msg=Task ID is {0}
+start.task.high=2-High 
+start.task.toggle.optional.info=Toggle Optional Task Info
+start.task.critical=1-Critical

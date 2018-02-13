@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">8</value>
+      <value name="minor">2</value>
+    </record>
+    <idatacodable name="rules" javaclass="com.wm.app.tn.route.RoutingRuleList">
+      <list name="contents">
+        <record javaclass="com.wm.app.tn.route.RoutingRule">
+          <value name="RuleName">ProcRuleForImport</value>
+          <null name="RuleDescription"/>
+          <value name="Disabled?">false</value>
+          <array name="SenderID" type="value" depth="1">
+            <value>53o6p0005lg162g00000000i</value>
+          </array>
+          <array name="ReceiverID" type="value" depth="1">
+            <value>000000000000000000000127</value>
+          </array>
+          <array name="DocTypeID" type="value" depth="1">
+            <value>53o6p0005lg1mohl0000001a</value>
+            <value>WMX12-4010--850---------</value>
+          </array>
+          <null name="UserStatus"/>
+          <value name="HasErrors">don't care</value>
+          <record name="PreRoutingFlags" javaclass="com.wm.app.tn.route.PreRoutingFlags">
+            <value name="verify?">don't care</value>
+            <value name="validate?">don't care</value>
+            <value name="persist?">don't care</value>
+            <value name="unique?">Custom</value>
+            <value name="persistOption?">don't care</value>
+            <value name="dupCheckSvc">pub.client:smtp</value>
+          </record>
+          <null name="AlertID"/>
+          <null name="AlertType"/>
+          <null name="AlertSubject"/>
+          <null name="AlertMessage"/>
+          <array name="ResponseMessage" type="value" depth="1">
+            <null/>
+            <null/>
+          </array>
+          <null name="IntendedUserStatus"/>
+          <value name="ServiceName">pub.flow:debugLog</value>
+          <record name="ServiceInput" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="message">Sumne</value>
+            <value name="function">testing</value>
+            <value name="level">Fatal</value>
+          </record>
+          <value name="ServiceAsync?">sync</value>
+          <value name="SendTo">Queue for delivery</value>
+          <value name="LastModified">2011-01-07 16:44:59.21</value>
+          <null name="AttributeConditions"/>
+          <value name="DeliveryQueue">TestQ</value>
+          <value name="RuleID">53o6p0005lg2vgtd0000006s</value>
+          <value name="LastChangeID">53o6p0005lg2qoa500000005</value>
+          <value name="LastChangeUser">administrator</value>
+          <value name="LastChangeSession">c827dd401a4b11e0b6b1ab9406bb0395</value>
+          <number name="RuleIndex" type="java.lang.Integer">7</number>
+          <array name="SenderGroup" type="value" depth="1">
+            <value>53o6p0005lg18gnb00000011</value>
+          </array>
+          <null name="ReceiverGroup"/>
+          <array name="SenderDisplayName" type="value" depth="1">
+            <value>$oftwareAG</value>
+          </array>
+          <array name="ReceiverDisplayName" type="value" depth="1">
+            <null/>
+          </array>
+          <array name="DocTypeName" type="value" depth="1">
+            <value>XMLDocType</value>
+            <value>X12 4010 850</value>
+          </array>
+          <array name="SetBAMAction" type="value" depth="1">
+            <value>*ãh</value>
+          </array>
+          <null name="SenderGroup"/>
+          <null name="ReceiverGroup"/>
+          <null name="ToMwSString"/>
+        </record>
+      </list>
+    </idatacodable>
+  </record>
+</IDataXMLCoder>

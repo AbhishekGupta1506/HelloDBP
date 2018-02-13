@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">HelloIS:HelloDBPRestServices</value>
+  <value name="node_pkg">HelloDBP</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">HelloDBPRestServices</value>
+    <value name="nsName">HelloIS:HelloDBPRestServices</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">HelloDBPRestServices/thing</value>
+        <value name="serviceName">HelloIS:insertThing</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">HelloDBPRestServices/thing</value>
+        <value name="serviceName">HelloIS:queryThings</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">HelloDBPRestServices/thing/{Id}</value>
+        <value name="serviceName">HelloIS:queryThing</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">HelloDBPRestServices/thing/{Id}</value>
+        <value name="serviceName">HelloIS:updateThing</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>PUT</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">HelloDBPRestServices/thing/{Id}</value>
+        <value name="serviceName">HelloIS:deleteThing</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>DELETE</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <null name="originUri"/>
+  <Boolean name="modifiable">true</Boolean>
+</Values>

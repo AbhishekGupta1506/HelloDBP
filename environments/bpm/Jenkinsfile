@@ -1,0 +1,120 @@
+#!/usr/bin/env groovy
+
+// http://vabpms-jenkins:8080/job/CommandCentral-bpms/
+
+// TODO: move to library
+def sagccant (command) {
+    if (isUnix()) {
+        sh "ant $command"
+    } else {
+        bat "ant $command"
+    }
+}
+
+def gradlew (command) {
+    if (isUnix()) {
+        sh "./gradlew $command"
+    } else {
+        bat "gradlew $command"
+    }
+}
+
+def restartVMs(propfile) {
+    def props = readProperties file: propfile
+    def vms = props['vm.names']?.split(',')
+    def vmserver = props['vm.server']
+    def vmwait = props['vm.wait']?.toInteger()
+
+    if (!vmserver) {
+        error message: "Required vm.server, vm.names properties are not set in ${params.CC_ENV} env.properties file"
+    }
+
+    def builders = [:]
+    for (x in vms) {
+        def vm = x
+        builders[vm] = {
+            node('master') {
+                vSphere buildStep: [$class: 'PowerOff', evenIfSuspended: false, shutdownGracefully: false, vm: vm], serverName: vmserver
+                vSphere buildStep: [$class: 'PowerOn', timeoutInSeconds: 180, vm: vm], serverName: vmserver
+                sleep vmwait
+            }
+        }                        
+    }
+    parallel builders // run in parallel
+}
+
+def provisionNodes(propfile) {
+    def props = readProperties file: propfile
+    def vms = props['vm.names']?.split(',')
+    def vmdomain = props['vm.domain']
+    def builders = [:]
+    for (x in vms) {
+        def label = x + vmdomain // Need to bind the label variable before the closure - can't do 'for (label in labels)'
+        builders[label] = {
+            node(label) {
+                unstash 'scripts'
+                sagccant "agent -Dbootstrap.properties=${propfile}"
+                sleep 60 // give more time to SPM to bootstrap: FIXME: a better way to wait
+            }
+        }                        
+    }
+    parallel builders // kick off parallel provisioning    
+}
+
+pipeline {
+    agent {
+        label 'cc'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr:'10'))
+        disableConcurrentBuilds()
+    }
+    parameters {
+        choice(choices: 'GA_Fix_Repo\nintRepo\nQARepo', description: 'Fix repository for test fixes', name: 'REPO_FIX')
+        choice(choices: 'server1\ncluster2\nbpmserver1\nbpmstatelesscluster2\nbpmstatefullcluster2', description: 'Environment type', name: 'ENV_TYPE')
+        
+        // reset vSphere VM's
+        booleanParam(defaultValue: false, description: 'Reset environment VMs', name: 'RESET')
+    }    
+    environment {
+        CC_ENV = 'bpm'
+        CC_ENV_FILE = "environments/bpm/env.properties"
+    }
+    stages {
+        stage ('Prepare') {
+            steps {
+                stash 'scripts'
+                sagccant "client -Dbootstrap.properties=${env.CC_ENV_FILE}"
+            }
+        }
+        stage ('Restart VMs') {
+            when {
+                expression {
+                    return params.RESET
+                }
+            }        
+            steps {
+                script {
+                    restartVMs env.CC_ENV_FILE
+                }              
+            }
+        }
+        stage ('Provision Nodes') {
+            steps {
+                script {
+                    provisionNodes env.CC_ENV_FILE
+                }                
+            }
+        }        
+        stage ('Provision GA') {
+            steps {
+                sagccant "up -Dapply.params=\"environment.type=${params.ENV_TYPE}\""
+            }
+        }
+        stage ('Apply Fixes') {
+            steps {
+                sagccant "up -Dapply.params=\"environment.type=${params.ENV_TYPE} repo.fix=${params.REPO_FIX}\"" // FIXME: better way
+            }
+        }    
+    }
+}

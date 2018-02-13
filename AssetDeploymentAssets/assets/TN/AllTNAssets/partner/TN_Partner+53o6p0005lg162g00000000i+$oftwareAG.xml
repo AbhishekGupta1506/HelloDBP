@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">8</value>
+      <value name="minor">2</value>
+    </record>
+    <list name="profiles">
+      <record javaclass="com.wm.app.tn.profile.Profile">
+        <record name="Corporate" javaclass="com.wm.app.tn.profile.Corporation">
+          <value name="PartnerID">53o6p0005lg162g00000000i</value>
+          <value name="CorporationName">$oftwareAG</value>
+          <null name="OrgUnitName"/>
+          <value name="Status">Active</value>
+          <value name="Type">TNServer    </value>
+          <idatacodable name="Self" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">true</value>
+          </idatacodable>
+          <idatacodable name="Deleted" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <value name="TNVersion">8.2.0.0</value>
+          <null name="Certificate"/>
+          <null name="CACertificate"/>
+          <null name="PrivateKey"/>
+          <null name="RemoteStatus"/>
+          <null name="PreferredProtocol"/>
+          <float name="PollingFrequency" type="java.lang.Float">0.0</float>
+          <number name="DeliveryMaxRetries" type="java.lang.Short">0</number>
+          <number name="DeliveryRetryWait" type="java.lang.Integer">0</number>
+          <null name="PollingProtocol"/>
+          <idatacodable name="B2BcomMember" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <number name="RetryFactor" type="java.lang.Integer">1</number>
+          <null name="DeliveryQueue"/>
+          <null name="Company Logo"/>
+          <array name="Address" type="record" depth="1">
+            <record javaclass="com.wm.app.tn.profile.Address">
+              <value name="AddressID">53o6p0005lg163ts0000000l</value>
+              <value name="PartnerID">53o6p0005lg162g00000000i</value>
+              <null name="ContactID"/>
+              <value name="AddressLine1">Address</value>
+              <null name="AddressLine2"/>
+              <null name="AddressLine3"/>
+              <value name="City">City</value>
+              <value name="State_Province">State</value>
+              <null name="Zip_PostalCode"/>
+              <null name="Country"/>
+              <number name="SequenceNumber" type="java.lang.Short">2</number>
+            </record>
+          </array>
+          <null name="PreferredLocale"/>
+          <idatacodable name="RoutingOff" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+        </record>
+        <array name="Contact" type="record" depth="1">
+          <record javaclass="com.wm.app.tn.profile.Contact">
+            <value name="PartnerID">53o6p0005lg162g00000000i</value>
+            <value name="ContactID">53o6p0005lg164t30000000m</value>
+            <value name="GivenName">kiran</value>
+            <value name="Surname">aithal</value>
+            <number name="SequenceNumber" type="java.lang.Short">2</number>
+            <number name="Type" type="java.lang.Short">1</number>
+            <value name="Role">tech_Role</value>
+            <null name="EmailAddress"/>
+            <null name="TelNumber"/>
+            <null name="TelExtension"/>
+            <null name="FaxNumber"/>
+            <null name="PagerNumber"/>
+            <record name="Address" javaclass="com.wm.app.tn.profile.Address">
+              <value name="AddressID">53o6p0005lg164u30000000n</value>
+              <null name="PartnerID"/>
+              <value name="ContactID">53o6p0005lg164t30000000m</value>
+              <value name="AddressLine1">contactAddress</value>
+              <null name="AddressLine2"/>
+              <null name="AddressLine3"/>
+              <value name="City">contactCity</value>
+              <value name="State_Province">contactState</value>
+              <null name="Zip_PostalCode"/>
+              <null name="Country"/>
+              <number name="SequenceNumber" type="java.lang.Short">1</number>
+            </record>
+            <value name="TypeName">Technical</value>
+          </record>
+          <record javaclass="com.wm.app.tn.profile.Contact">
+            <value name="PartnerID">53o6p0005lg162g00000000i</value>
+            <value name="ContactID">53o6p0005lg1650h0000000o</value>
+            <value name="GivenName">Kiran*</value>
+            <value name="Surname">aithal</value>
+            <number name="SequenceNumber" type="java.lang.Short">3</number>
+            <number name="Type" type="java.lang.Short">2</number>
+            <value name="Role">adminRole</value>
+            <null name="EmailAddress"/>
+            <null name="TelNumber"/>
+            <null name="TelExtension"/>
+            <null name="FaxNumber"/>
+            <null name="PagerNumber"/>
+            <record name="Address" javaclass="com.wm.app.tn.profile.Address">
+              <value name="AddressID">53o6p0005lg1650h0000000p</value>
+              <null name="PartnerID"/>
+              <value name="ContactID">53o6p0005lg1650h0000000o</value>
+              <value name="AddressLine1">Address</value>
+              <null name="AddressLine2"/>
+              <null name="AddressLine3"/>
+              <value name="City">City</value>
+              <value name="State_Province">State_Admin</value>
+              <null name="Zip_PostalCode"/>
+              <null name="Country"/>
+              <number name="SequenceNumber" type="java.lang.Short">1</number>
+            </record>
+            <value name="TypeName">Administrative</value>
+          </record>
+        </array>
+        <array name="Delivery" type="record" depth="1">
+          <record javaclass="com.wm.app.tn.profile.Destination">
+            <value name="PartnerID">53o6p0005lg162g00000000i</value>
+            <value name="Protocol">SMTP - testDeliveryMethod</value>
+            <idatacodable name="PrimaryAddr" javaclass="com.wm.data.MBoolean">              <value name="MBoolean">true</value>
+            </idatacodable>
+            <null name="Host"/>
+            <null name="Port"/>
+            <value name="Location">kiran.aithal@gmail.com</value>
+            <null name="UserName"/>
+            <value name="Password"></value>
+            <null name="CustomData"/>
+            <value name="DestinationID">53o6p0005lg1bggg00000013</value>
+            <null name="NativeProtocol"/>
+            <null name="CustomDataString"/>
+          </record>
+        </array>
+        <array name="ID" type="record" depth="1">
+          <record javaclass="com.wm.app.tn.profile.ID">
+            <value name="ExternalID">#31</value>
+            <number name="IDType" type="java.lang.Integer">149</number>
+            <value name="InternalID">53o6p0005lg162g00000000i</value>
+            <number name="SequenceNumber" type="java.lang.Short">0</number>
+            <value name="PartnerIDID">53o6p0005lg162s60000000k</value>
+            <value name="IDTypeName">TestIdType~</value>
+          </record>
+          <record javaclass="com.wm.app.tn.profile.ID">
+            <value name="ExternalID">00-000-0000</value>
+            <number name="IDType" type="java.lang.Integer">1</number>
+            <value name="InternalID">53o6p0005lg162g00000000i</value>
+            <number name="SequenceNumber" type="java.lang.Short">0</number>
+            <value name="PartnerIDID">53o6p0005lg162r70000000j</value>
+            <value name="IDTypeName">DUNS</value>
+          </record>
+        </array>
+        <array name="ProfileGroups" type="value" depth="1">
+          <value>53o6p0005lg17t920000000t</value>
+          <value>53o6p0005lg18gnb00000011</value>
+        </array>
+        <array name="ProfileGroupNames" type="value" depth="1">
+          <value>PartnerGroup</value>
+          <value>*ãh</value>
+        </array>
+        <null name="Users"/>
+      </record>
+    </list>
+  </record>
+</IDataXMLCoder>

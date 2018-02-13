@@ -1,0 +1,920 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" name="AllTNAssets" displayName="AllTNAssets" targetNamespace="http://namespaces.softwareag.com/webMethods/TN" runtimeVersion="8.2.1.0">
+  <buildInfo name="BuildTimestamp" value="2011-01-07T17:06:45" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="8.2.1.0" />
+  <asset name="documentattribute.53o6p0005lg1qisi0000006a" displayName="dateTimeList">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.MessageVersion----------" displayName="MessageVersion">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT MDN Disposition--" displayName="EDIINT MDN Disposition">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Ignore PRT Document-----" displayName="Ignore PRT Document">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIStatus---------------" displayName="EDI Status">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIGroupType------------" displayName="EDI Group Type">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1od4i00000031" displayName="stringName">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Group CtrlNum Status----" displayName="Group CtrlNum Status">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT Delivery URI-----" displayName="EDIINT Delivery URI">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1nt7g0000002c" displayName="cost">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.PriorityCode------------" displayName="PriorityCode">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIOutboundFA-----------" displayName="EDI Outbound FA">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Has RSGRSG--------------" displayName="Has RSGRSG">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIVersion--------------" displayName="EDI Version">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT MDN Orig Msg ID--" displayName="EDIINT MDN Orig Msg ID">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT Message doPayload" displayName="EDIINT Message doPayload">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1pm7f00000050" displayName="numberList">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Syntax Identifier-------" displayName="Syntax Identifier">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Is Multiple Envelope----" displayName="Is Multiple Envelope">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.ApplicationReference----" displayName="ApplicationReference">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIAcknowledgment-------" displayName="EDI Acknowledgment">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1nbdt0000001n" displayName="五輪代表">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.NSName------------------" displayName="NS Name">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1op4m0000003m" displayName="stringList">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT Message Digest---" displayName="EDIINT Message Digest">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDI Transport Media-----" displayName="EDI Transport Media">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Transaction CtrlNum Stat" displayName="Transaction CtrlNum Status">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT User Payload Proc" displayName="EDIINT User Payload Processed">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Syntax Release Number---" displayName="Syntax Release Number">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1p7q70000004b" displayName="number">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT Message Type-----" displayName="EDIINT Message Type">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIProcessingMode-------" displayName="EDI Processing Mode">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.53o6p0005lg1q5um0000005l" displayName="dateTime">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.BatchRecipientsReference" displayName="BatchRecipientsReference">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT Message ID-------" displayName="EDIINT Message ID">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDILateFA---------------" displayName="Late FA">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.ReceiversTransmissionRef" displayName="ReceiversTransmissionReference">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIFAControlNumber------" displayName="EDI FA Control Number">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Envelope CtrlNum Status-" displayName="Envelope CtrlNum Status">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.SyntaxRulesIdentifier---" displayName="SyntaxRulesIdentifier">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDI FA Status-----------" displayName="EDI FA Status">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.Directory Version Number" displayName="Directory Version Number">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIBatch----------------" displayName="EDI Batch">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documentattribute.EDIINT MDN Received MIC-" displayName="EDIINT MDN Received MIC">
+    <implementation.generic type="documentattribute" />
+  </asset>
+  <asset name="documenttype.WMX12-1-----ENVELOPE----" displayName="X12 Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMEANC1-----GROUP-------" displayName="EANCOM Group">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMUNED1-----GROUP-------" displayName="UNEDIFACT Group">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMVICS1-----GROUP-------" displayName="VICS Group">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDI FA Status-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMUNED1-----ENVELOPE----" displayName="UNEDIFACT Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDI FA Status-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMTRAD1-----STX---------" displayName="TRADACOMS Transmission">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.Is Multiple Envelope----</dependsOn>
+    <dependsOn>TN:documentattribute.ReceiversTransmissionRef</dependsOn>
+    <dependsOn>TN:documentattribute.ApplicationReference----</dependsOn>
+    <dependsOn>TN:documentattribute.PriorityCode------------</dependsOn>
+    <dependsOn>TN:documentattribute.SyntaxRulesIdentifier---</dependsOn>
+    <dependsOn>TN:documentattribute.MessageVersion----------</dependsOn>
+    <dependsOn>TN:documentattribute.Has RSGRSG--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMX12-4010--850---------" displayName="X12 4010 850">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMVICS1-----ENVELOPE----" displayName="VICS Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMUCS-1-----ENVELOPE----" displayName="UCS Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.EDIINT------------------" displayName="EDIINT">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIINT Message Type-----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT Message ID-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT Message Digest---</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT Delivery URI-----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT Message doPayload</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT User Payload Proc</dependsOn>
+  </asset>
+  <asset name="documenttype.WMODET1-----GROUP-------" displayName="ODETTE Group">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.EDIINT MDN--------------" displayName="EDIINT MDN">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIINT Message Type-----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT Message ID-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT MDN Orig Msg ID--</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT MDN Received MIC-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT MDN Disposition--</dependsOn>
+    <dependsOn>TN:documentattribute.EDIINT Delivery URI-----</dependsOn>
+  </asset>
+  <asset name="documenttype.WMUCS-1-----GROUP-------" displayName="UCS Group">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDI FA Status-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.0af00103f70d0bcc00000002" displayName="PROFVAL_extFields">
+    <implementation.generic type="documenttype" />
+  </asset>
+  <asset name="documenttype.WMVDA-1-----ENVELOPE----" displayName="VDA Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.0af00103f70d0bcc00000001" displayName="PROFVAL_Profile">
+    <implementation.generic type="documenttype" />
+  </asset>
+  <asset name="documenttype.0af00103f70d0bcc00000000" displayName="PROFVAL_stdFields">
+    <implementation.generic type="documenttype" />
+  </asset>
+  <asset name="documenttype.000000000000000000111111" displayName="Unknown">
+    <implementation.generic type="documenttype" />
+  </asset>
+  <asset name="documenttype.WMEANC1-----ENVELOPE----" displayName="EANCOM Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDI FA Status-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.B2BRecord---------------" displayName="Record Document">
+    <implementation.generic type="documenttype" />
+  </asset>
+  <asset name="documenttype.WMTRAD1-----BATCH-------" displayName="TRADACOMS Batch">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.ReceiversTransmissionRef</dependsOn>
+    <dependsOn>TN:documentattribute.ApplicationReference----</dependsOn>
+    <dependsOn>TN:documentattribute.PriorityCode------------</dependsOn>
+    <dependsOn>TN:documentattribute.BatchRecipientsReference</dependsOn>
+    <dependsOn>TN:documentattribute.MessageVersion----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.WMX12-1-----GROUP-------" displayName="X12 Group">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.Group CtrlNum Status----</dependsOn>
+    <dependsOn>TN:documentattribute.EDI FA Status-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="documenttype.53o6p0005lg1mohl0000001a" displayName="XMLDocType">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.53o6p0005lg1nt7g0000002c</dependsOn>
+    <dependsOn>TN:documentattribute.53o6p0005lg1pm7f00000050</dependsOn>
+    <dependsOn>TN:documentattribute.53o6p0005lg1nbdt0000001n</dependsOn>
+    <dependsOn>TN:documentattribute.53o6p0005lg1op4m0000003m</dependsOn>
+    <dependsOn>TN:documentattribute.53o6p0005lg1q5um0000005l</dependsOn>
+    <dependsOn>TN:documentattribute.53o6p0005lg1qisi0000006a</dependsOn>
+    <dependsOn>TN:externalidtype.1</dependsOn>
+  </asset>
+  <asset name="documenttype.WMODET1-----ENVELOPE----" displayName="ODETTE Envelope">
+    <implementation.generic type="documenttype" />
+    <dependsOn>TN:documentattribute.EDIAcknowledgment-------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIBatch----------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIProcessingMode-------</dependsOn>
+    <dependsOn>TN:documentattribute.Envelope CtrlNum Status-</dependsOn>
+    <dependsOn>TN:documentattribute.EDIVersion--------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIGroupType------------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIOutboundFA-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDI FA Status-----------</dependsOn>
+    <dependsOn>TN:documentattribute.EDIStatus---------------</dependsOn>
+  </asset>
+  <asset name="processingrule.EDIINT Send MDN Message-" displayName="EDIINT Send MDN Message">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.EDIINT MDN--------------</dependsOn>
+  </asset>
+  <asset name="processingrule.EDIINT Process MDN Messa" displayName="EDIINT Process MDN Message">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.EDIINT MDN--------------</dependsOn>
+  </asset>
+  <asset name="processingrule.EDIINT Process Message--" displayName="EDIINT Process Message">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.EDIINT------------------</dependsOn>
+  </asset>
+  <asset name="processingrule.EDIINT Send Message-----" displayName="EDIINT Send Message">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.EDIINT------------------</dependsOn>
+  </asset>
+  <asset name="processingrule.53o6p0005lfsm8bj00000002" displayName="Profile Validation Standard Fields">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.0af00103f70d0bcc00000000</dependsOn>
+  </asset>
+  <asset name="processingrule.53o6p0005lfsm8bj00000004" displayName="Profile Validation Profile">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.0af00103f70d0bcc00000001</dependsOn>
+  </asset>
+  <asset name="processingrule.53o6p0005lfsm8bj00000006" displayName="Profile Validation Extended Fields">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:documenttype.0af00103f70d0bcc00000002</dependsOn>
+  </asset>
+  <asset name="processingrule.53o6p0005lg2vgtd0000006s" displayName="ProcRuleForImport">
+    <implementation.generic type="processingrule" />
+    <dependsOn>TN:partner.53o6p0005lg162g00000000i</dependsOn>
+    <dependsOn>TN:partner.000000000000000000000127</dependsOn>
+    <dependsOn>TN:profilegroup.53o6p0005lg18gnb00000011</dependsOn>
+    <dependsOn>TN:documenttype.53o6p0005lg1mohl0000001a</dependsOn>
+    <dependsOn>TN:documenttype.WMX12-4010--850---------</dependsOn>
+    <dependsOn>TN:queue.TestQ</dependsOn>
+  </asset>
+  <asset name="processingrule.53o6p0005lfsm8bj00000008" displayName="Default rule">
+    <implementation.generic type="processingrule" />
+  </asset>
+  <asset name="partner.53o6p0005lg162g00000000i" displayName="$oftwareAG">
+    <implementation.generic type="partner" />
+    <dependsOn>TN:externalidtype.149</dependsOn>
+    <dependsOn>TN:externalidtype.1</dependsOn>
+    <dependsOn>TN:profilegroup.53o6p0005lg17t920000000t</dependsOn>
+    <dependsOn>TN:profilegroup.53o6p0005lg18gnb00000011</dependsOn>
+    <dependsOn>TN:fielddefinition.53o6p0005lfsmk3c0000002l</dependsOn>
+    <dependsOn>TN:fielddefinition.53o6p0005lfsmk3c0000002m</dependsOn>
+    <dependsOn>TN:fielddefinition.53o6p0005lfsmk3r0000002n</dependsOn>
+    <dependsOn>TN:fielddefinition.53o6p0005lfsmk3r0000002o</dependsOn>
+    <dependsOn>TN:fielddefinition.53o6p0005lfsmk4b0000002p</dependsOn>
+    <dependsOn>TN:fielddefinition.53o6p0005lfsmk4b0000002q</dependsOn>
+    <dependsOn>TN:contacttype.1</dependsOn>
+    <dependsOn>TN:contacttype.2</dependsOn>
+  </asset>
+  <asset name="partner.000000000000000000000000" displayName="Unknown">
+    <implementation.generic type="partner" />
+  </asset>
+  <asset name="fieldgroup.3" displayName="Delivery">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fieldgroup.1" displayName="Corporation">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fieldgroup.4" displayName="Custom">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fieldgroup.5" displayName="External ID">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fieldgroup.7" displayName="EDIINT">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fieldgroup.2" displayName="Contact">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fieldgroup.6" displayName="Address">
+    <implementation.generic type="fieldgroup" />
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000022" displayName="Host">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000024" displayName="Location">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000001f" displayName="PartnerID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000026" displayName="Password">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000023" displayName="Port">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000021" displayName="PrimaryAddr">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000020" displayName="Protocol">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000025" displayName="User Name">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.181cc374f70defc000000009" displayName="DestinationID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.181cc374f70defc000000008" displayName="CustomData">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lg1c3hk00000014" displayName="kiran">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.3</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000001" displayName="Corporation Name">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.5065v900uh553jub01vvvvvr" displayName="Preferred Language">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000009" displayName="Deleted">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000002" displayName="Unit Name">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000000" displayName="PartnerID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000008" displayName="Self">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000003" displayName="Status">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000bb02" displayName="TNVersion">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000004" displayName="Partner Type">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000007" displayName="CA Certificate">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000006" displayName="Certificate">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000a19" displayName="Delivery Maximum Retries">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000a20" displayName="Wait Between Retries">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd000000W7" displayName="PartnerID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000a18" displayName="Polling Frequency">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000ba0" displayName="Polling Method">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000a17" displayName="Preferred Delivery Method">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000bb01" displayName="Private Key">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd000000X7" displayName="RemoteStatus">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70db3a600000001" displayName="B2BcomMember">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a0144c4f70dc02e00000000" displayName="Retry Factor">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.1</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000027" displayName="ExternalID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.5</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000028" displayName="IDType">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.5</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000029" displayName="InternalID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.5</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000a15" displayName="PartnerIDID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.5</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000a16" displayName="SequenceNumber">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.5</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmjjn0000002j" displayName="AS1MDNURL">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk2s0000002k" displayName="AS2MDNURL">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk3c0000002l" displayName="Encryption Algorithm">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk3c0000002m" displayName="SMIME Type">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk3r0000002n" displayName="Compression">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk3r0000002o" displayName="Delivery Method">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk4b0000002p" displayName="Request MDN">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk4b0000002q" displayName="Request Signed Receipt">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.53o6p0005lfsmk4b0000002r" displayName="FTPUserName">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.7</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000014" displayName="ContactID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000001a" displayName="E-mail">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000001d" displayName="Fax">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000017" displayName="First Name">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000001e" displayName="Pager">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000009a" displayName="PartnerID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000018" displayName="Role">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000015" displayName="SequenceNumber">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000016" displayName="Last Name">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000001c" displayName="Extension">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000001b" displayName="Telephone">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000019" displayName="Contact Type">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.2</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000000a" displayName="AddressID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000000d" displayName="Address">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000000e" displayName="AddressLine2">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000000f" displayName="AddressLine3">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000010" displayName="City">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000000c" displayName="ContactID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000013" displayName="Country">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd0000000b" displayName="PartnerID">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000011" displayName="State/Province">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70d65fd00000012" displayName="Postal Code">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="fielddefinition.0a013357f70db3a600000000" displayName="SequenceNumber">
+    <implementation.generic type="fielddefinition" />
+    <dependsOn>TN:fieldgroup.6</dependsOn>
+  </asset>
+  <asset name="externalidtype.HIN" displayName="132">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.FMC" displayName="134">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.6-Digit Code List of Secondary Institutions" displayName="147">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.FEIN" displayName="121">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.ISO 6523" displayName="115">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Society of Preperty Info Compilers and Analysts" displayName="128">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.seller agent" displayName="105">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Tradacoms Name" displayName="103">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.GLN" displayName="142">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.ATP" displayName="135">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.ABA Routing" displayName="144">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.buyer agent" displayName="131">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.AIAG" displayName="120">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.X.121" displayName="145">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.IATA" displayName="107">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.EDICA ID" displayName="148">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.BfA" displayName="109">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.4-Digit Code List of Postsecondary Institutions" displayName="136">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.SCAC" displayName="130">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.EDIINT AS3" displayName="102">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.EDIINT AS2" displayName="101">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.PAS Code" displayName="122">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.EDIINT AS1" displayName="100">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.AMECOP ID" displayName="118">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.GEIS" displayName="146">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.DIN" displayName="138">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Stat College Student Info System Institution Codes" displayName="119">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Stat University Student Info System Institution Codes" displayName="141">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.User Defined 3" displayName="97">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.ID by SAFER" displayName="127">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.User Defined 2" displayName="96">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.User Defined 1" displayName="95">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Stat of List of Postsecondary Institution" displayName="129">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.BdDB" displayName="112">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.DUNS+4" displayName="2">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Carrier ID by HCFA" displayName="125">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Medicare Provider and Supplier ID by states" displayName="137">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.NRMA" displayName="140">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Standard Address Number" displayName="123">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.DUNS" displayName="1">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Medicare Provider and Supplier ID by HCFA" displayName="110">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Bank ID" displayName="108">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.UCC ID" displayName="124">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.IPEDS" displayName="139">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Mutually Defined" displayName="99">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Fiscal Intermediary ID by HCFA" displayName="126">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.EULER" displayName="3">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.UCS Code" displayName="117">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.INSEE SIRET" displayName="116">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.DoD Code" displayName="143">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.NCES" displayName="133">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.DEA" displayName="106">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.INSEE SIREN" displayName="114">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Tradacoms Code" displayName="104">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.TestIdType~" displayName="149">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.EAN" displayName="113">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="externalidtype.Phone" displayName="111">
+    <implementation.generic type="externalidtype" />
+  </asset>
+  <asset name="contacttype.Technical" displayName="1">
+    <implementation.generic type="contacttype" />
+  </asset>
+  <asset name="contacttype.Administrative" displayName="2">
+    <implementation.generic type="contacttype" />
+  </asset>
+  <asset name="binarytype.Query" displayName="8">
+    <implementation.generic type="binarytype" />
+  </asset>
+  <asset name="binarytype.DocType Categories" displayName="9">
+    <implementation.generic type="binarytype" />
+  </asset>
+  <asset name="profilegroup.*ãh" displayName="53o6p0005lg18gnb00000011">
+    <implementation.generic type="profilegroup" />
+  </asset>
+  <asset name="profilegroup.PartnerGroup" displayName="53o6p0005lg17t920000000t">
+    <implementation.generic type="profilegroup" />
+  </asset>
+  <asset name="tpa.0a3c1b200000040900000457" displayName="EDITPA_$oftwareAG_Unknown">
+    <implementation.generic type="tpa" />
+    <dependsOn>TN:partner.53o6p0005lg162g00000000i</dependsOn>
+    <dependsOn>TN:partner.000000000000000000000000</dependsOn>
+  </asset>
+  <asset name="tpa.0a3c1b200000fcb50000002c" displayName="EDITPA_Unknown_Unknown">
+    <implementation.generic type="tpa" />
+    <dependsOn>TN:partner.000000000000000000000000</dependsOn>
+  </asset>
+  <asset name="queue.TestQ" displayName="TestQ">
+    <implementation.generic type="queue" />
+  </asset>
+  <asset name="archiveschedule.newArchive" displayName="newArchive">
+    <implementation.generic type="archiveschedule" />
+    <dependsOn>TN:partner.53o6p0005lg162g00000000i</dependsOn>
+    <dependsOn>TN:partner.000000000000000000000000</dependsOn>
+    <dependsOn>TN:documenttype.53o6p0005lg1mohl0000001a</dependsOn>
+  </asset>
+</asset_composite>
+

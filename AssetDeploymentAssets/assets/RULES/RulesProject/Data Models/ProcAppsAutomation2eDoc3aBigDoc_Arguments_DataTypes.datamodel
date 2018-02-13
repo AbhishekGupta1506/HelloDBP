@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><deftemplateModel version="10.1.0.0.172" isSlotSpecific="false" isBackchainReactive="false" fromClass="pkgRulesProject.pkgData20Models.DMProcAppsAutomation2eDoc3aBigDoc_Arguments_DataTypes" isIncludeVariables="true" isOrdered="false" fromISDocType="true" isHost="localhost:5555" isPort="5555" isPackage="ProcAppsAutomation" isDocType="ProcAppsAutomation.Doc:BigDoc" isDocTypeFieldNS="/Arguments;2;0/DataTypes;2;0" isDocTypeFieldPos="10">
+    <comments/>
+    <slots>
+        <slot slotName="dtInteger" position="0" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtInteger;3.6;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="integerdatatype" value="7"/>
+        </slot>
+        <slot slotName="dtFloat" position="1" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtFloat;3.5;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="doubledatatype" cameFromFloat="true" value="5"/>
+        </slot>
+        <slot slotName="dtDouble" position="2" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtDouble;3.4;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="doubledatatype" cameFromFloat="false" value="5"/>
+        </slot>
+        <slot slotName="dtLong" position="3" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtLong;3.7;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="longdatatype" value="8"/>
+        </slot>
+        <slot slotName="dtChar" position="4" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtChar;3.3;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="characterdatatype" value="4"/>
+        </slot>
+        <slot slotName="dtDate" position="5" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtDate;3.9;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="datedatatype" value="10"/>
+        </slot>
+        <slot slotName="dtBoolean" position="6" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/dtBoolean;3.1;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="booleandatatype" value="2"/>
+        </slot>
+    </slots>
+</deftemplateModel>

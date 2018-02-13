@@ -1,0 +1,33 @@
+<CONFIG>
+	<CONTEXT alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app">
+		<folder name="DeployTestTask Inbox" description="DeployTestTask Inbox" alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app.inbox" isTaskFolder="true">
+			<Mode type="sync">
+	            <page>
+	            	<row>
+	            		<column>
+	            			
+	            			<deploytesttaskapp___deploytesttaskinboxbar 
+	                            name="Search For"
+	            				description="Search for DeployTestTask"
+	                            alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app.inbox.bar">
+	                        </deploytesttaskapp___deploytesttaskinboxbar>
+	                        
+	                        
+	                        <deploytesttaskapp___deploytesttaskinboxresults
+	                            name="Task Results"
+	                            description="DeployTestTask search results"
+	                            alias="708F0279-CDEC-A308-F018-E90393A483AB.task.app.inbox.result"><relation
+	                            />
+								
+	                            <wiring name="queryString" portlet="708F0279-CDEC-A308-F018-E90393A483AB.task.app.inbox.bar" property="lastSearchState"/>
+	                            
+	                        </deploytesttaskapp___deploytesttaskinboxresults>
+	                        
+	                    </column>
+	                </row>
+	                <hobos/>
+	            </page>
+	        </Mode>
+        </folder>
+    </CONTEXT>
+</CONFIG>

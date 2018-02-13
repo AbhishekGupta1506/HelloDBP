@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<project xmlns="antlib:org.apache.tools.ant" xmlns:au="antlib:org.apache.ant.antunit" basedir="..">
+
+	<import file="../build.xml" />
+	
+	<target name="test-repo-asset" depends="sagenvInit" description="Verify asset repositories">
+        <property file="${env.properties}" />
+		<cc command="list repository assets" format="csv" output="build/logs/asset-repos.csv" />
+		<au:assertResourceContains resource="build/logs/asset-repos.csv" value="${asset.repo}" message="${asset.repo} asset repository is not in the list" />
+	</target>
+	
+</project>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project xmlns="antlib:org.apache.tools.ant" xmlns:au="antlib:org.apache.ant.antunit" basedir="..">
+	<import file="../build.xml" />	
+	<target name="test-deploy-assets" depends="sagenvInit" description="Get deploy job status" >
+		<sleep seconds="15"/>
+        <java fork="true" failonerror="yes" classname="ReadFile" outputproperty="JobID">
+            <arg value="jobID"/>
+			<arg value="/build/logs/deployToCIOur.txt"/>
+        </java>
+		 <echo message = "Job ID is : ${JobID}"/>		 
+		 <echo message = "sagcc list jobmanager jobs ${JobID}" />
+		 <property file="${env.properties}" />
+		 <cc command="list jobmanager jobs ${JobID}" format="tsv" output="build/logs/listCommandOutput.txt" />	
+		 <java fork="true" failonerror="yes" classname="ReadFile" outputproperty="jobStatus" >
+            <arg value="jobStatus"/>
+			<arg value="/build/logs/listCommandOutput.txt"/>
+        </java>
+		<echo message = "status of the job is : ${jobStatus}"/>
+		<au:assertResourceContains resource="build/logs/listCommandOutput.txt" value="DONE" message="Deployment Unsuccessful" />	 
+    </target>
+</project>

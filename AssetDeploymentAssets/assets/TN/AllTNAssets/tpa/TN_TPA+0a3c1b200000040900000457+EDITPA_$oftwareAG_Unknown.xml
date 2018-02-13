@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">8</value>
+      <value name="minor">2</value>
+    </record>
+    <list name="tpas">
+      <record javaclass="com.wm.app.tn.tpa.TPA">
+        <value name="tpaID">0a3c1b200000040900000457</value>
+        <value name="senderID">53o6p0005lg162g00000000i</value>
+        <value name="receiverID">000000000000000000000000</value>
+        <value name="agreementID">EDITPA</value>
+        <value name="created">2011-01-07 17:03:21.056</value>
+        <value name="lastModified">2011-01-07 17:03:21.056</value>
+        <value name="controlNumber">0</value>
+        <value name="status">agreed</value>
+        <null name="exportService"/>
+        <value name="initService">wm.b2b.editn.TPA:initService</value>
+        <value name="dataSchema">wm.b2b.editn.TPA:EDITPA</value>
+        <value name="dataStatus">immutable</value>
+        <record name="tpaData" javaclass="com.wm.data.ISMemDataImpl">
+          <record name="GSRouting" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="routingMode">OFF</value>
+            <value name="senderQualifier">*</value>
+            <value name="receiverQualifier">*</value>
+          </record>
+          <value name="persistMultipleDocEnvelope">true</value>
+          <value name="processingMode">Testing</value>
+          <value name="splitOption">Transaction</value>
+          <value name="FAReconciliation">false</value>
+          <value name="UNAmode">auto</value>
+          <value name="publishBatchFailEvent">false</value>
+          <record name="ICheaderInfo" javaclass="com.wm.data.ISMemDataImpl">
+            <record name="ISA" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="ISA01">00</value>
+              <value name="ISA03">00</value>
+              <value name="ISA11">U</value>
+            </record>
+            <record name="GS" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="GS07">X</value>
+            </record>
+            <record name="UNB" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="UNB01">UNOA:1</value>
+              <value name="UNB08">A</value>
+            </record>
+          </record>
+          <record name="FAGeneration" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="autoGenerateFA">Off</value>
+            <value name="FALevel">Default</value>
+            <value name="processDocument">All</value>
+            <value name="generateControlNumber">FromInboundDocument</value>
+            <value name="addGroup">false</value>
+            <value name="ctlNumberWleadingZero">false</value>
+            <record name="RejectionRules" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="syntaxErrorStatus">Rejected</value>
+              <value name="logicalErrorStatus">Rejected</value>
+              <value name="childTransactionRejectedStatus">Rejected</value>
+            </record>
+          </record>
+          <record name="ControlNumberManagement" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="validateInboundEnvelopeControlNumbers">false</value>
+            <value name="validateInboundGroupControlNumbers">false</value>
+            <value name="duplicateControlNumberAction">Error &amp; Continue</value>
+            <value name="outOfSequenceControlNumberAction">Error &amp; Continue</value>
+            <record name="VDA" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="validateStructure">false</value>
+            </record>
+          </record>
+          <value name="useReverseRoute">false</value>
+          <record name="TRADACOMS" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="enforceApplicationReference">false</value>
+            <value name="splitOption">Transmission</value>
+            <value name="storageOption">One Message</value>
+            <record name="ControlNumberManagement" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="validateInboundTransmissionControlNumbers">true</value>
+              <value name="validateInboundBatchControlNumbers">true</value>
+              <value name="validateInboundFileControlNumbers">true</value>
+              <value name="duplicateControlNumberAction">Process Normally</value>
+              <value name="outOfSequenceControlNumberAction">Process Normally</value>
+            </record>
+            <record name="OutBound" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="createReconciliationMessage">true</value>
+              <value name="applicationReferenceFromFile">true</value>
+            </record>
+          </record>
+          <record name="BatchCriteria" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="useDefault">TRUE</value>
+            <record name="UNB" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="UNB01" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00101">FALSE</value>
+                <value name="S00102">TRUE</value>
+                <value name="S00103">TRUE</value>
+                <value name="S00104">TRUE</value>
+                <value name="S00105">TRUE</value>
+              </record>
+              <record name="UNB02" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00201">TRUE</value>
+                <value name="S00202">TRUE</value>
+                <value name="S00203">TRUE</value>
+                <value name="S00204">TRUE</value>
+              </record>
+              <record name="UNB03" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00301">TRUE</value>
+                <value name="S00302">TRUE</value>
+                <value name="S00303">TRUE</value>
+                <value name="S00304">TRUE</value>
+              </record>
+              <record name="UNB04" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00401">TRUE</value>
+                <value name="S00402">TRUE</value>
+              </record>
+              <value name="UNB05">TRUE</value>
+              <record name="UNB06" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00501">TRUE</value>
+                <value name="S00502">TRUE</value>
+              </record>
+              <value name="UNB07">TRUE</value>
+              <value name="UNB08">TRUE</value>
+              <value name="UNB09">TRUE</value>
+              <value name="UNB10">TRUE</value>
+              <value name="UNB11">TRUE</value>
+            </record>
+            <record name="UNG" javaclass="com.wm.data.ISMemDataImpl">
+              <value name="UNG01">TRUE</value>
+              <record name="UNG02" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00601">TRUE</value>
+                <value name="S00602">TRUE</value>
+              </record>
+              <record name="UNG03" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00701">TRUE</value>
+                <value name="S00702">TRUE</value>
+              </record>
+              <record name="UNG04" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00401">TRUE</value>
+                <value name="S00402">TRUE</value>
+              </record>
+              <value name="UNG05">TRUE</value>
+              <value name="UNG06">TRUE</value>
+              <record name="UNG07" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="S00801">TRUE</value>
+                <value name="S00802">TRUE</value>
+                <value name="S00803">TRUE</value>
+              </record>
+              <value name="UNG08">TRUE</value>
+            </record>
+            <record name="ISA" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="ISA01" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <value name="ISA02">TRUE</value>
+              <record name="ISA03" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <value name="ISA04">TRUE</value>
+              <record name="ISA05" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="ISA06" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="ISA07" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="ISA08" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <value name="ISA09">TRUE</value>
+              <value name="ISA10">TRUE</value>
+              <record name="ISA11" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="ISA12" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <value name="ISA13">TRUE</value>
+              <record name="ISA14" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="ISA15" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <value name="ISA16">TRUE</value>
+            </record>
+            <record name="GS" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="GS01" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="GS02" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="GS03" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <value name="GS04">TRUE</value>
+              <value name="GS05">TRUE</value>
+              <value name="GS06">TRUE</value>
+              <record name="GS07" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+              <record name="GS08" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="code">TRUE</value>
+              </record>
+            </record>
+          </record>
+          <value name="persistOriginalEnvelope">false</value>
+        </record>
+        <value name="version">8.2.0.0</value>
+        <null name="description"/>
+        <value name="senderDisplayName">$oftwareAG</value>
+        <value name="receiverDisplayName">Unknown</value>
+      </record>
+    </list>
+  </record>
+</IDataXMLCoder>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Asset Build for Bundles" default="build" basedir=".">
+    <!-- Configuration properties supplied by the App Platform build script
+    
+    Component description:
+    <property name="component.name" value="name of the component" />
+    <property name="component.type" value="type of the component" />
+    <property name="component.home" value="directory where the component code is" />
+    <property name="component.dependencies" value="list of the component.name-s of dependency projects" />
+    
+    Component build configuration:
+    <property name="component.build.file" value="name of the resulting file" />
+    <property name="component.build.dir" value="dirctory where to output the component.file" />
+    <property name="component.build.dependencies" value="a transitively closed Path to the jars of all dependency projects" />
+    <property name="component.build.dependencies.external" value="the resolved compilation classpath to external pre-built BUNDLES" />
+    <property name="component.build.version" value="version of this build." />
+    <property name="component.build.timestamp" value="time of this build." />
+    -->
+
+    <target name="setup">
+        <!-- Configure the Compiler -->
+        <property name="build.compiler" value="modern" />
+        <property name="build.fork" value="false" />
+        <property name="build.debug" value="on" />
+        <property name="build.deprecation" value="on" />
+        <property name="build.optimize" value="off" />
+        <property name="build.nowarn" value="on" />
+        <property name="build.listfiles" value="on" />
+        <property name="build.failonerror" value="true" />
+        
+        <!-- Configure the project layout -->
+        <property name="component.src" value="${component.home}/src/main/java" />
+        <property name="component.resources" value="${component.home}/src/main/resources" />
+        <property name="component.webresources" value="${component.home}/src/main/webapp" />
+        <property name="component.lib" value="${component.home}/lib" />
+        
+        <!-- Prepare the build working area -->
+        <mkdir dir="${component.build.dir}" />
+        
+        <property name="component.build.classes" value="${component.build.dir}/classes" />
+        <mkdir dir="${component.build.classes}" />
+        
+        <property name="component.build.assembly" value="${component.build.dir}/assembly" />
+        <mkdir dir="${component.build.assembly}" />
+    </target>
+    
+    <target name="build" depends="setup">
+        <!-- Build the compilation classpath -->
+        <path id="component.build.classpath">
+            <path refid="sdk.classpath" />
+            <path path="${component.build.dependencies}" />
+            <path path="${component.build.dependencies.external}" />
+            <fileset dir="${component.lib}" includes="*.jar" erroronmissingdir="false" />
+        </path>
+        
+        <!-- Compile if needed
+         
+             TODO It is amazingly hard to make javac do nothing if component.src is missing.
+                  Must succeed and remove this final use of ant-contrib
+        -->
+        <if>
+            <available file="${component.src}" type="dir" />
+            <then>
+                <javac srcdir="${component.src}"
+                       destdir="${component.build.classes}"
+                       classpathref="component.build.classpath"
+                       includeAntRuntime="false"
+                       encoding="UTF-8"
+                       fork="${build.fork}"
+                       failonerror="${build.failonerror}"
+                       debug="${build.debug}"
+                       deprecation="${build.deprecation}"
+                       optimize="${build.optimize}"
+                       nowarn="${build.nowarn}"
+                       listfiles="${build.listfiles}" />
+            </then>
+        </if>
+        
+        <!-- Package a regular WAR -->
+        <copy todir="${component.build.assembly}/WEB-INF/classes" includeemptydirs="false" verbose="true">
+            <fileset dir="${component.build.classes}" includes="**/*.class" erroronmissingdir="false" />
+        </copy>
+        
+        <copy todir="${component.build.assembly}/WEB-INF/classes" includeemptydirs="false" verbose="true">
+            <fileset dir="${component.resources}" includes="**/*" erroronmissingdir="false" />
+        </copy>
+                    
+        <copy todir="${component.build.assembly}" includeemptydirs="false" verbose="true">
+            <fileset dir="${component.webresources}" includes="**/*" erroronmissingdir="false" />
+        </copy>
+        
+        <copy todir="${component.build.assembly}/WEB-INF/lib" includeemptydirs="false" verbose="true">
+            <fileset dir="${component.lib}" includes="*.jar" erroronmissingdir="false" />
+        </copy>
+        
+        <jar basedir="${component.build.assembly}" 
+             destfile="${component.build.dir}/${component.build.file}" />
+    </target>
+
+    <target name="clean">
+        <delete dir="${component.build.dir}" failonerror="false" />
+    </target>
+</project>

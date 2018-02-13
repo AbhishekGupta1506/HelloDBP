@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Asset Build for Configurations" default="build" basedir=".">
+    
+    <!-- Configuration properties supplied by the App Plaform build script
+    
+    <property name="component.name" value="name of the component" />
+    <property name="component.type" value="type of the component" />
+    <property name="component.home" value="directory where the component code is" />
+    <property name="component.dependencies" value="list of dependency jars for compilation" />
+    
+    <property name="component.build.file" value="name of the expected file" />
+    <property name="component.build.dir" value="dirctory where to output the component file" />
+    <property name="component.build.version" value="version of this build." />
+    <property name="component.build.timestamp" value="time of this build." />
+    -->
+
+    <target name="setup">
+        <!-- Create the build workspace -->
+        <mkdir dir="${component.build.dir}" />
+    </target>
+            
+    <target name="build" depends="setup">
+        <copy verbose="true" file="${component.build.file}" todir="${component.build.dir}" />
+    </target>
+
+    <target name="clean" />
+</project>

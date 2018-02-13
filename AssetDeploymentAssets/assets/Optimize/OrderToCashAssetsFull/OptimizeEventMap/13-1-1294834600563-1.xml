@@ -1,0 +1,113 @@
+<event-mapping name= "13-1-1294834600563-1" revision= "1" lastRevision= "0" lastRevisionName= "null" revisionTime= "1299503575469" displayName= "OrderToCash_Booked" author= "Internal" description= "null" userDef= "true" basetype= "OrderToCash - Booked" business="yes"  businessprocess="OrderToCashProject/OrderToCash">
+		<attribute name="Step">
+			<dimension-attribute>
+				<dimension>Step</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>StepModelId</dimension-attribute-name>
+				<display-name>Step</display-name>
+			</dimension-attribute>
+		</attribute>
+		<attribute name="Deadline">
+			<date-attribute>
+				<name>Deadline</name>
+			</date-attribute>
+		</attribute>
+		<attribute name="Process">
+			<dimension-attribute>
+				<dimension>Process</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>ModelId</dimension-attribute-name>
+				<display-name>Process</display-name>
+			</dimension-attribute>
+		</attribute>
+		<attribute name="Website">
+			<dimension-attribute>
+				<dimension>Website</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>URL</dimension-attribute-name>
+				<display-name>Website</display-name>
+			</dimension-attribute>
+		</attribute>
+		<attribute name="Region">
+			<dimension-attribute>
+				<dimension>Region</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>RegionName</dimension-attribute-name>
+				<display-name>Region</display-name>
+			</dimension-attribute>
+		</attribute>
+		<attribute name="BusinessEventFlag">
+			<generic-attribute>
+				<name>Business Event</name>
+			</generic-attribute>
+		</attribute>
+		<attribute name="OrderAmount">
+			<fact-attribute>
+				<name>OrderAmount</name>
+				<uom>Items</uom>
+				<aggregationType>1</aggregationType>
+			</fact-attribute>
+		</attribute>
+		<attribute name="StepIteration">
+			<dimension-attribute>
+				<dimension>StepIteration</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>Iteration</dimension-attribute-name>
+				<display-name>Step Iteration</display-name>
+			</dimension-attribute>
+		</attribute>
+		<attribute name="Branch">
+			<dimension-attribute>
+				<dimension>Branch</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>BranchName</dimension-attribute-name>
+				<display-name>Branch</display-name>
+			</dimension-attribute>
+		</attribute>
+		<attribute name="ProcessInstanceId">
+			<generic-attribute>
+				<name>ProcessInstanceId</name>
+			</generic-attribute>
+		</attribute>
+		<attribute name="Customer">
+			<dimension-attribute>
+				<dimension>Customer</dimension>
+				<dimension-version>1</dimension-version>
+				<dimension-attribute-name>CustomerName</dimension-attribute-name>
+				<display-name>Customer</display-name>
+			</dimension-attribute>
+		</attribute>
+<KPI val="CTxLUEkgbmFtZT0gIjEzLTQtMTI5NDgzNDcwMDM0NC0zIiBkaXNwbGF5TmFtZT0gIk9yZGVyIEFt
+b3VudCBCeSBSZWdpb24iIHJldmlzaW9uVGltZT0gIjEyOTQ4MzQ2ODIyODIiIHJldmlzaW9uPSAi
+MSIgbGFzdFJldmlzaW9uPSAiMCIgYnVzaW5lc3M9ICJ0cnVlIiBhdXRob3I9ICJBZG1pbmlzdHJh
+dG9yIiBkZXNjcmlwdGlvbj0gIiIgVXNlckRlZmluZWQ9ICJ0cnVlIiBNb25pdG9yTmFtZT0gIk9y
+ZGVyIEFtb3VudCBmb3IgcmVnaW9uOiAkUmVnaW9uLlJlZ2lvbk5hbWUiID4NCgkJPERhdGFTb3Vy
+Y2U+DQoJCQk8V2FyZWhvdXNlRGF0YVNvdXJjZT4NCgkJCQk8Q2Fub25pY2FsRXZlbnQ+MTMtMS0x
+Mjk0ODM0NjAwNTYzLTE8L0Nhbm9uaWNhbEV2ZW50Pg0KCQkJCTxDYW5vbmljYWxFdmVudFZlcnNp
+b24+MTwvQ2Fub25pY2FsRXZlbnRWZXJzaW9uPg0KCQkJCTxGYWN0TmFtZT5PcmRlckFtb3VudDwv
+RmFjdE5hbWU+DQoJCQkJPEhpZXJhcmNoeVNldHRpbmdzPg0KCQkJCQk8SGllcmFyY2h5U2V0dGlu
+Zz4NCgkJCQkJCTxIaWVyYXJjaHlOYW1lPjEzLTMtMTI5NDgzNDYyMDkyMy0yPC9IaWVyYXJjaHlO
+YW1lPg0KCQkJCQkJPEhpZXJhcmNoeVZlcnNpb24+MTwvSGllcmFyY2h5VmVyc2lvbj4NCgkJCQkJ
+CTxEaW1lbnNpb25OYW1lPlJlZ2lvbjwvRGltZW5zaW9uTmFtZT4NCgkJCQkJCTxEaW1lbnNpb25W
+ZXJzaW9uPjE8L0RpbWVuc2lvblZlcnNpb24+DQoJCQkJCQk8RGltZW5zaW9uQXR0cmlidXRlTmFt
+ZT5SZWdpb25OYW1lPC9EaW1lbnNpb25BdHRyaWJ1dGVOYW1lPg0KCQkJCQk8L0hpZXJhcmNoeVNl
+dHRpbmc+DQoJCQkJPC9IaWVyYXJjaHlTZXR0aW5ncz4NCgkJCTwvV2FyZWhvdXNlRGF0YVNvdXJj
+ZT4NCgk8L0RhdGFTb3VyY2U+DQoJPEludGVydmFsPjYwMDAwPC9JbnRlcnZhbD4NCgk8VU9NPkl0
+ZW1zPC9VT00+DQoJPEFnZ3JlZ2F0aW9uVHlwZT4xPC9BZ2dyZWdhdGlvblR5cGU+DQoJPFRyZWF0
+RW1wdHlBc1plcm8+ZmFsc2U8L1RyZWF0RW1wdHlBc1plcm8+DQo8L0tQST4NCg=="></KPI>
+<KPI val="CTxLUEkgbmFtZT0gIjEzLTQtMTI5NDgzNDgwOTEwOS00IiBkaXNwbGF5TmFtZT0gIltDS1BJXSBP
+cmRlciBBbW91bnQgQnkgUmVnaW9uIiByZXZpc2lvblRpbWU9ICIxMjk0ODM0NzA0NDY5IiByZXZp
+c2lvbj0gIjEiIGxhc3RSZXZpc2lvbj0gIjAiIGJ1c2luZXNzPSAidHJ1ZSIgYXV0aG9yPSAiQWRt
+aW5pc3RyYXRvciIgZGVzY3JpcHRpb249ICIiIFVzZXJEZWZpbmVkPSAidHJ1ZSIgTW9uaXRvck5h
+bWU9ICJbQ0tQSV0gT3JkZXIgQW1vdW50IGZvciByZWdpb246ICRSZWdpb24uUmVnaW9uTmFtZSIg
+Pg0KCQk8RGF0YVNvdXJjZT4NCgkJPEZ1bmN0aW9uRGF0YVNvdXJjZT4NCgkJCTxDaGlsZEtQST4x
+My00LTEyOTQ4MzQ3MDAzNDQtMzwvQ2hpbGRLUEk+DQoJCQk8RnVuY3Rpb24+YWRkPC9GdW5jdGlv
+bj4NCgkJCTxDaGlsZEtQST4xMy00LTEyOTQ4MzQ3MDAzNDQtMzwvQ2hpbGRLUEk+DQoJCTwvRnVu
+Y3Rpb25EYXRhU291cmNlPg0KCTwvRGF0YVNvdXJjZT4NCgk8SW50ZXJ2YWw+NjAwMDA8L0ludGVy
+dmFsPg0KCTxDaGlsZEtQSVM+DQoJCTxLcGlSZWxhdGlvbnNoaXAgS3BpTmFtZT0gIjEzLTQtMTI5
+NDgzNDcwMDM0NC0zIiBLcGlWZXJzaW9uPSAiMSIgLz4NCgkJPEtwaVJlbGF0aW9uc2hpcCBLcGlO
+YW1lPSAiMTMtNC0xMjk0ODM0NzAwMzQ0LTMiIEtwaVZlcnNpb249ICIxIiAvPg0KCTwvQ2hpbGRL
+UElTPg0KCTxVT00+SXRlbXM8L1VPTT4NCgk8QWdncmVnYXRpb25UeXBlPjE8L0FnZ3JlZ2F0aW9u
+VHlwZT4NCgk8VHJlYXRFbXB0eUFzWmVybz5mYWxzZTwvVHJlYXRFbXB0eUFzWmVybz4NCjwvS1BJ
+Pg0K"></KPI>
+</event-mapping>

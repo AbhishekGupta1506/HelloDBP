@@ -1,0 +1,10 @@
+<DimensionDefinition name= "Customer" revision= "1" lastRevision= "0" lastRevisionName= "null" revisionTime= "1299503574734" displayName= "Customer" author= "Internal" description= "null" userDefined= "true" BaseType= "Customer" >
+	<IdentityAttributes>
+		<Attribute AttributeName="CustomerName" AttributeDisplayName ="CustomerName"/>
+	</IdentityAttributes>
+	<PropertyAttributes>
+	</PropertyAttributes>
+	<RequiredAttributes>
+		<Attribute>CustomerName</Attribute>
+	</RequiredAttributes>
+</DimensionDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">yes</value>
+  <value name="system_package">no</value>
+  <value name="version">1.0</value>
+  <null name="startup_services"/>
+  <null name="shutdown_services"/>
+  <null name="replication_services"/>
+  <null name="requires"/>
+  <null name="listACL"/>
+  <value name="name">ScBAMFramework</value>
+  <value name="build">100</value>
+  <value name="description"></value>
+  <value name="time">2017-10-04 12:13:41 IST</value>
+  <value name="jvm_version">1.8.0_141</value>
+  <value name="publisher">VMSIQA-ABG04.eur.ad.sag</value>
+  <value name="patch_nums"></value>
+</Values>

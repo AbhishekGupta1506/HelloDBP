@@ -1,0 +1,2 @@
+Bundle-SymbolicName: org.example.services.api
+Export-Package: org.example.formatter;version="1.0", org.example.timer;version="1.0"

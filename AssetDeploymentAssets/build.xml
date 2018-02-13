@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project name="assets" xmlns="antlib:org.apache.tools.ant" basedir="." default="build" >
+	<import file="antcc/main.xml" />
+	<!-- import file="tests/IntegrationServerTests/build.xml" / -->
+
+    <!-- TODO: move to antcc/lib/sagabe.xml -->
+    <target name="publish" depends="sagabeInit" description="Publish build to Command Central" >
+        <property name="asset.repo" value="${ant.project.name}-${build.number}" />
+        <mkdir dir="build/dist" />
+        <zip destfile="build/dist/${asset.repo}.zip" basedir="${build.output.dir}" />
+		<echo>${build.output.dir}/${asset.repo}.zip</echo>
+		<chmod file="${build.output.dir}/${asset.repo}.zip" perm="777"/>
+		<cc command="add repository assets flatfile name=${asset.repo} overwrite=true" input="/opt/HelloDBPAssetsDeployScenario/build/dist/${asset.repo}.zip" format="tsv" />	
+		<sleep seconds="15"/>
+        <cc command="list repository assets content ${asset.repo}" format="tsv" />				
+	</target>
+	
+	 <target name="AddGitRepo" depends="sagabeInit" description="Add git assets repo to Command Central" >
+        <property name="asset.repo" value="${ant.project.name}-${build.number}" />
+		<cc command="add repository assets git name=${asset.repo} location=https://github.com/AbhishekGupta1506/ABERepo.git credentials=NONE overwrite=true" description="Git Repo" format="tsv" />	
+		<sleep seconds="60"/>
+        <cc command="list repository assets content ${asset.repo}" format="tsv" />				
+	</target>
+
+	<target name="deployToCIIS" description="deploy to CI" depends="sagabeInit">
+		<!--record name="deployToCIOur.txt" action="start"/ -->
+        <!--cc command="exec provisioning assets local ${env.REPO} install runtimeComponentId=integrationServer-default artifacts=IS:Fibonachi,IS:ScOrderToCash,IS:OrderToCashProject" format="tsv" output="build/logs/deployToCIOur.txt" /-->
+		<cc command="exec provisioning assets dev1 ${asset.repo} install runtimeComponentId=integrationServer-default artifacts=IS:HelloDBP" format="tsv" output="build/logs/deployToCIOur.txt" />
+		<!--record name="deployToCIOur.txt" action="stop"/ -->
+		<sleep seconds="30"/>
+    </target>
+	
+	<target name="deployToCIMWS" description="deploy to CI" depends="sagabeInit">
+		<!--record name="deployToCIOur.txt" action="start"/ -->
+       <cc command="exec provisioning assets local ${env.REPO} install runtimeComponentId=MwsProgramFiles-default artifacts=MWS:DeployTestTaskApp" format="tsv" output="build/logs/deployToCIOur.txt" />
+		<!--record name="deployToCIOur.txt" action="stop"/ -->
+		<sleep seconds="30"/>
+    </target>
+	
+	<target name="deployToCIAppPlatform" description="deploy to CI AppPlatform" depends="sagabeInit">
+		<!--record name="deployToCIOur.txt" action="start"/ -->
+       <cc command="exec provisioning assets local ${env.REPO} install runtimeComponentId=OSGI-IS_default-AppPlatform-ENGINE artifacts=AppPlatform:division-service" format="tsv" output="build/logs/deployToCIOur.txt" />
+		<!--record name="deployToCIOur.txt" action="stop"/ -->
+		<sleep seconds="30"/>
+    </target>
+	
+	<target name="deployToCIBRMS_IS" description="deploy to CI BusinessRules on IS" depends="sagabeInit">
+		<!--record name="deployToCIOur.txt" action="start"/ -->
+       <cc command="exec provisioning assets local ${env.REPO} install runtimeComponentId=OSGI-IS_default-WmBusinessRules artifacts=RULES:RulesProject" format="tsv" output="build/logs/deployToCIOur.txt" />
+		<!--record name="deployToCIOur.txt" action="stop"/ -->
+		<sleep seconds="30"/>
+    </target>
+	
+	 <!--target name="listRepository_TypeAsset" depends="sagabeInit" description="list repository assets" >
+        <cc command="list repository assets content ${asset.repo} type=asset" format="tsv" />				
+	</target -->
+	
+	<target name="unDeployCIIS" description="undeploy CI IS assets" depends="sagabeInit">
+		<!--record name="deployToCIOur.txt" action="start"/ -->
+		<!--cc command="exec provisioning assets local ${env.REPO} install runtimeComponentId=integrationServer-default artifacts=IS:Fibonachi,IS:ScOrderToCash,IS:OrderToCashProject" format="tsv" output="build/logs/deployToCIOur.txt" /-->
+		<cc command="exec provisioning assets local uninstall runtimeComponentId=integrationServer-default artifacts=IS:Fibonachi" format="tsv" output="build/logs/undeployToCIOur.txt" />
+		<!--record name="deployToCIOur.txt" action="stop"/ -->
+		<sleep seconds="30"/>
+    </target>
+	
+	<target name="generateHTMLReport" description="generate the html report of ant unit testing">
+                <property name="genReportDir" location="${basedir}/build/tests/HTMLreport"/>
+                <delete dir="${genReportDir}"/>
+                <mkdir dir="${genReportDir}"/>
+                <junitreport todir="build/tests/HTMLreport">
+                        <fileset dir="build/tests/default">
+                                <include name="**/TEST-*.xml"/>
+                        </fileset>
+                        <report format="frames" todir="${genReportDir}/html"/>
+                </junitreport>
+    </target> 
+</project>

@@ -1,0 +1,94 @@
+pipeline {
+	agent {
+        label 'HelloDBP'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr:'30'))
+        disableConcurrentBuilds()
+    }
+    environment {
+        VERSION="1.0.0.${env.BUILD_NUMBER}"
+        REPO="assets-${env.VERSION}"
+		NODEALIAS="local"
+    }
+    tools {
+        ant "ant-1.9.7"
+        jdk "jdk-1.8"
+    }    
+    stages {
+        stage('Tools') {
+            steps {
+                sh 'echo HelloDBP'
+            }
+        }
+		stage('Launching Command Central and supporting containers'){
+			steps{
+				dir('../../../'){
+					sh 'docker-compose run --rm init'
+					sh 'docker-compose run --rm init sagcc list repository fixes -e GA_Fix_Repo -w 300'
+				}
+			}
+		
+		}
+		stage('Provisioning GA products and fixes'){
+			steps{
+				script {
+					try{
+						sh 'docker-compose run --rm test'
+						}
+					catch(Exception e) {
+						echo 'product provision failed, known issue TCD folder permission issue'
+						sh 'docker exec -i bpm_dev1_1 chmod -R 777 /opt/softwareag/TerracottaDB/server/SPM/bin'
+						sh 'docker exec -i bpm_cc_1 /opt/softwareag/CommandCentral/client/bin/sagcc exec lifecycle start dev1 TDBServer-default'
+					}
+					finally {
+						echo "finally block executed."
+					}
+				}
+			}
+		}
+		stage('Configure TDB'){
+			steps{
+				sh 'sh /home/saguser/mosy/bpm/Assets/TerracottaDBConfigure.sh'
+			}
+		}
+		stage('Copy assets to CC Docker container'){
+			steps{
+				sh 'docker cp /home/saguser/mosy/bpm/Assets/workspace/HelloDBPAssetsDeployScenario/ bpm_cc_1:/opt/'
+			}
+		}
+		//stage('Build Assets for deployment'){
+		//	steps{
+		//		sh 'docker exec -i bpm_cc_1 ant -buildfile /opt/HelloDBPAssetsDeployScenario/build.xml'
+		//	}
+		//}
+		stage('Publish to CC') {
+			steps {
+                //sh "docker exec -i bpm_cc_1 ant publish -buildfile /opt/HelloDBPAssetsDeployScenario/build.xml test -Dasset.repo=${env.REPO}"
+				sh "docker exec -i bpm_cc_1 ant AddGitRepo -buildfile /opt/HelloDBPAssetsDeployScenario/build.xml test -Dasset.repo=${env.REPO}"
+			}
+		}
+		stage('Deploy to IS') {
+			steps {
+				script {
+					try{
+						sh "docker exec -i bpm_cc_1 ant deployToCIIS -buildfile /opt/HelloDBPAssetsDeployScenario/build.xml -Dasset.repo=${env.REPO}"
+						currentBuild.result = 'SUCCESS'
+					}
+					catch(Exception e) {
+						// Do something with the exception 
+						currentBuild.result = 'FAILURE'
+					}
+					echo "Deploy to IS RESULT: ${currentBuild.result}. "
+				}
+			}
+		}
+		stage('Notify QA') {
+            steps {
+                mail to: 'abg@softwareag.com',
+                    subject: "Pipeline completed: ${currentBuild.fullDisplayName}",
+                    body: "Checkout the artifacts at ${env.BUILD_URL}"
+            }
+        }
+	}
+}

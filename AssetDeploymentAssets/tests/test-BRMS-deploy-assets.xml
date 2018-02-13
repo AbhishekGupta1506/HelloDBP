@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<project xmlns="antlib:org.apache.tools.ant" xmlns:au="antlib:org.apache.ant.antunit" basedir="..">
+<target name="test-BRMS-deploy-assets" description="verify the jars present or not. present means deployment successful else failed">
+		<sleep seconds="15"/>
+		 <java fork="true" failonerror="yes" classname="CheckFiles" outputproperty="isPresent" >
+            <arg value="${brmsdir}"/>
+			<arg value="${rulesjar}"/>
+        </java>
+		<echo message = "BRMS assets deployed JAR is present : ${isPresent}"/>
+		<au:assertResourceContains resource="build/logs/output.txt" value="True" message="Deployment successful" />
+    </target>
+</project>

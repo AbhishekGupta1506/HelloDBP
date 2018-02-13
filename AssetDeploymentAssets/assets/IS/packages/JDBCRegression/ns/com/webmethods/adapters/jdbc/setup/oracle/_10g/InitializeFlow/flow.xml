@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateJoinTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateOrdersTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateOrderLinesTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateOrderLineMaterialsTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateRegressionTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateResultsTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSpCharTable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreatePackage" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPDelete" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPInsert" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPMultipleOut" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPMultipleOut2">
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPMultipleResultSet" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPSelectWhere" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateAccountNoType" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateAddressType">
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateAddressListType">
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateArrayTable">
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateBlobClobTable">
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPBlobClobInsert">
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPBlobClobOUT" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPBlobClobResult" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPArrayStructResult">
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPArrayStructOUT">
+</INVOKE>
+
+<INVOKE SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPArrayStructIN">
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.setup.oracle._10g:CreateSPStructIN" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+</FLOW>

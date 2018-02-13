@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><deftemplateModel version="10.1.0.0.172" isSlotSpecific="false" isBackchainReactive="false" fromClass="pkgRulesProject.pkgData20Models.DMProcAppsAutomation2eDoc3aBigDoc_LaunchData" isIncludeVariables="true" isOrdered="false" fromISDocType="true" isHost="localhost:5555" isPort="5555" isPackage="ProcAppsAutomation" isDocType="ProcAppsAutomation.Doc:BigDoc" isDocTypeFieldNS="/LaunchData;2;0" isDocTypeFieldPos="0">
+    <comments/>
+    <slots>
+        <slot slotName="StartFilter" position="0" isMultiSlot="false" isRequired="true" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/StartFilter;1;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="stringdatatype" value="0"/>
+        </slot>
+        <slot slotName="ExecutedBy" position="1" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/ExecutedBy;1;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="stringdatatype" value="0"/>
+        </slot>
+        <slot slotName="Other" position="2" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/Other;1;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="stringdatatype" value="0"/>
+        </slot>
+    </slots>
+</deftemplateModel>

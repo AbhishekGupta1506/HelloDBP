@@ -1,0 +1,10 @@
+<DimensionDefinition name= "Region" revision= "1" lastRevision= "0" lastRevisionName= "null" revisionTime= "1299503575125" displayName= "Region" author= "Internal" description= "null" userDefined= "true" BaseType= "Region" >
+	<IdentityAttributes>
+		<Attribute AttributeName="RegionName" AttributeDisplayName ="RegionName"/>
+	</IdentityAttributes>
+	<PropertyAttributes>
+	</PropertyAttributes>
+	<RequiredAttributes>
+		<Attribute>RegionName</Attribute>
+	</RequiredAttributes>
+</DimensionDefinition>

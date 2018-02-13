@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project xmlns="antlib:org.apache.tools.ant" xmlns:au="antlib:org.apache.ant.antunit" basedir="..">
+
+	<import file="../build.xml" />
+	
+	<target name="test-list-asset" depends="sagenvInit" description="command = sagcc list repository assets content ${asset.repo} type=asset. This will list all the individual level assets present in the repository ">
+        <property file="${env.properties}" />
+		<echo message = "checking : IS service getFibunachiNumber" />
+		<!--echo message = "checking : MWS Task.708F0279-CDEC-A308-F018-E90393A483ABasset"/-->
+		<!--echo message = "checking : Rules RuleDataModel.RulesProject.ProcAppsAutomation2eDoc3aBigDoc_Arguments_DataTypes" /-->
+		<cc command="list repository assets content ${env.REPO} type=asset" format="csv" output="build/logs/repos_type_assets.csv" />
+		<au:assertResourceContains resource="build/logs/repos_type_assets.csv" value="Fibonachi.services.getFibunachiNumber" message="IS service getFibunachiNumber asset is not in the list" />
+		<!--au:assertResourceContains resource="build/logs/repos_type_assets.csv" value="Task.708F0279-CDEC-A308-F018-E90393A483AB" message="MWS Task.708F0279-CDEC-A308-F018-E90393A483ABasset is not in the list" /-->
+		<!--au:assertResourceContains resource="build/logs/repos_type_assets.csv" value="RuleDataModel.RulesProject.ProcAppsAutomation2eDoc3aBigDoc_Arguments_DataTypes" message="BusinessRules on IS RuleDataModel.RulesProject.ProcAppsAutomation2eDoc3aBigDoc_Arguments_DataTypes is not in the list" /-->
+	</target>
+	
+	<target name="test-list-composite" depends="sagenvInit" description="command = sagcc list repository assets content ${asset.repo} type=asset. This will list all the composite level assets present in the repository">
+        <property file="${env.properties}" />
+		<echo message = "checking : IS package IS:Fibonachi" />
+		<!--echo message = "checking : MWS Task portlet MWS:DeployTestTaskApp"/-->
+		<!--echo message = "checking : Rules project RULES:RulesProject" /-->
+		<cc command="list repository assets content ${env.REPO} type=composite" format="csv" output="build/logs/repos_type_composite.csv" />
+		<au:assertResourceContains resource="build/logs/repos_type_composite.csv" value="IS:Fibonachi" message="IS package IS:Fibonachi is not in the list" />
+		<!--au:assertResourceContains resource="build/logs/repos_type_composite.csv" value="MWS:DeployTestTaskApp" message="MWS:DeployTestTaskApp is not in the list" /-->
+		<!--au:assertResourceContains resource="build/logs/repos_type_composite.csv" value="RULES:RulesProject" message="RULES:RulesProject is not in the list" /-->
+	</target>
+	<target name="test-list-assetDeployed" depends="sagenvInit" description="command =  sagcc list inventory assets [nodeAlias=nodeAlias] [runtimeComponentId=runtimeComponentId] [refresh=true]. This will list all the assets deployed to the runtime">
+		<property file="${env.properties}" />
+		<echo message="checking: IS deployed assets" />
+		<cc command="list inventory assets nodeAlias=local runtimeComponentId=integrationServer-default refresh=true" format="csv" output="build/logs/runtime_IS_assetsDeployed.csv" />
+		<au:assertResourceContains resource="build/logs/runtime_IS_assetsDeployed.csv" value="Fibonachi" message="IS Fibonachi package not found in the list" />
+		<!--echo message="checking: MWS deployed assets" /-->
+		<!--cc command="list inventory assets nodeAlias=local runtimeComponentId=MwsProgramFiles-default refresh=true" format="csv" output="build/logs/runtime_MWS_assetsDeployed.csv" /-->
+		<!--au:assertResourceContains resource="build/logs/runtime_MWS_assetsDeployed.csv" value="DeployTestTaskApp" message="MWS DeployTestTaskApp Task App not found in the list" /-->
+	</target>
+	<target name="test-list-assetType" depends="sagenvInit" description="command = sagcc list repository assets namespaces repoName. This will list all the namespaces present in the repository">
+		<property file="${env.properties}" />
+		<echo message="checking: IS namespaces" />
+		<!--echo message="checking: MWS namespaces" /-->
+		<!--echo message="checking: RULES namespaces" /-->
+		<cc command="list repository assets namespaces ${env.REPO}" format="tsv" output="build/logs/repos_type_server.txt" />
+		<au:assertResourceContains resource="build/logs/repos_type_server.txt" value="IS" message="IS namespaces not found in the list" />
+		<!--au.assertResourceContains resource="build/logs/repos_type_server.csv" value="MWS" message="MWS namespaes not found in the list" /-->
+		<!--au.asssetResourceContains resource="build/logs/repos_type_server.csv" value="RULES" message="RULES namespaces not found in the list" /-->
+	</target>	
+	<target name="test-list-supportedcomponents" depends="sagenvInit" description="command =  sagcc list provisioning assets nodeAlias supportedcomponents">
+		<property file="${env.properties}" />
+		<echo message="checking the supportedcomponents for deployment" />
+		<cc command="list provisioning assets local supportedcomponents" format="csv" output="build/logs/repos_type_supportedcomponents.csv" />
+		<au:assertResourceContains resource="build/logs/repos_type_supportedcomponents.csv" value="integrationServer-default" message="IS node alias not found in the list"/>	
+		<!--au:assertResourceContains resource="build/logs/repos_type_supportedcomponents.csv" value="MwsProgramFiles-default" message="MWS nodeAlias not found in the list">
+			<echo message="MWS nodeAlias is present"/>
+		</au:assertResourceContains-->
+	</target>	
+</project>

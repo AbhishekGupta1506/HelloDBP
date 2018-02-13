@@ -1,0 +1,19 @@
+<project basedir="." default="testreport" name="FMSAutomation">
+
+	<target name="SoapUI">
+		<exec dir="." executable="C:\Program Files (x86)\SmartBear\SoapUI-5.3.0\bin\testrunner.bat">
+			<arg line="-r -j -f 'C:\Users\abg\Desktop\SVN\cc-deploy-demo/build/tests/default' -s IntegrationServer_TestSuite 'C:\Users\abg\Desktop\SVN\cc-deploy-demo\tests\IntegrationServerTests/IntegrationServer-Test-soapui-project.xml'" />
+		</exec>
+	</target>
+
+
+	<target name="testreport" depends="SoapUI">
+			<junitreport todir="C:\Users\abg\Desktop\SVN\cc-deploy-demo/build/tests/default">
+				<fileset dir="C:\Users\abg\Desktop\SVN\cc-deploy-demo/build/tests/default">
+					<include name="TEST-*.xml" />
+				</fileset>
+				<report todir="C:\Users\abg\Desktop\SVN\cc-deploy-demo/build/tests/default/HTML">
+				</report>
+			</junitreport>
+</target>
+</project>		

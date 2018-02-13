@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><deftemplateModel version="10.1.0.0.172" isSlotSpecific="false" isBackchainReactive="false" fromClass="pkgRulesProject.pkgData20Models.DMBigDoc" isIncludeVariables="true" isOrdered="false" fromISDocType="true" isHost="localhost:5555" isPort="5555" isPackage="ProcAppsAutomation" isDocType="ProcAppsAutomation.Doc:BigDoc" isDocTypeFieldPos="-1">
+    <slots>
+        <slot slotName="LaunchData" position="0" isMultiSlot="false" isRequired="true" isUnspecifiedAllowed="false" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/LaunchData;2;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="deftemplatedatatype" deftemplateName="ProcAppsAutomation2eDoc3aBigDoc_LaunchData.datamodel" deftemplatePath="/RulesProject/Data Models" value="999"/>
+        </slot>
+        <slot slotName="Arguments" position="1" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="false" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/Arguments;2;0">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="deftemplatedatatype" deftemplateName="ProcAppsAutomation2eDoc3aBigDoc_Arguments.datamodel" deftemplatePath="/RulesProject/Data Models" value="999"/>
+        </slot>
+        <slot slotName="_env" position="2" isMultiSlot="false" isRequired="false" isUnspecifiedAllowed="true" isPasswordType="false" displayType="Text Field" originalFieldPosition="-1" key="/_env;4;0;pub.publish:envelope">
+            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="deftemplatedatatype" originalNamespace="pub.publish:envelope" deftemplateName="pub.publish_envelope.datamodel" deftemplatePath="/RulesProject/Data Models" value="999"/>
+        </slot>
+    </slots>
+</deftemplateModel>

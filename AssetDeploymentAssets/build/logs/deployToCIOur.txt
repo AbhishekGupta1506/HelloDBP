@@ -1,0 +1,2 @@
+ID	Duration	Status   	Progress	Description                                                                                                     	Progress Description	Status Description	Custom Status	Custom Status Description
+3 	0       	SCHEDULED	0       	Asset provisioning from assets-1.0.0.53 repository to OSGI-IS_default-AppPlatform-ENGINE component on local node	                    	SCHEDULED         	             	 

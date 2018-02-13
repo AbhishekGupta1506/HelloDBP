@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Application Platform Components Build" default="build" basedir=".">
+    <!-- Configuration properties supplied by the master build script
+        
+    <property name="sag.install.dir" value="a path to the local SAG installation" />
+    <property name="build.version" value="version of the assets we build" />
+    <property name="build.output.dir" value="path to the repo where to store the built assets" />
+    <property name="build.source.dir" value="list of paths to sets of projects" />
+    <property name="build.source.project.dir" value="list of paths to single projects" />
+    <property name="build.external.dir" value="list of paths to directories with pre-built assets to include in the solution" />
+    -->
+
+    <dirname file="${ant.file}" property="buildfile.dir" />
+
+    <!-- 
+        Tasks 
+    -->
+    <path id="buildtasks.classpath">
+        <fileset dir="${buildfile.dir}/lib" includes="*.jar" />
+    </path>
+
+    <!--taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath refid="buildtasks.classpath" />
+    </taskdef-->
+
+    <taskdef name="buildComponents" classname="com.softwareag.platform.app.build.reactor.BuildComponents">
+        <classpath refid="buildtasks.classpath" />
+    </taskdef>
+
+    <taskdef name="publish" classname="com.softwareag.platform.app.build.acdl.ant.PublishAssets">
+        <classpath refid="buildtasks.classpath" />
+    </taskdef>
+
+    <!-- 
+       Build 
+    -->
+    <import file="${buildfile.dir}/sdk.xml" />
+
+    <tstamp>
+        <format property="build.timestamp" pattern="yyyy-MM-dd'T'HH:mm:ss" />
+    </tstamp>
+
+    <property name="component.build.dir.name" value="build" />
+
+    <property name="build.staging.dir" value="${buildfile.dir}/build" />
+    <property name="build.staging.assets.dir" value="${build.staging.dir}/assets" />
+    <property name="resolver.config" value="${basedir}/resolver.bnd" />
+
+    <!-- 
+        Default target. 
+        
+        1. Builds any AppPlatform assets found in source form to ${build.output.dir}.
+        2. Publishes all externally supplied AppPlatform assets to ${build.output.dir}.
+    -->
+    <target name="build" 
+            description="Build Application Platform Component(s) and ACDL(s)" 
+            depends="build-components, build-externals">
+
+        <publish outputDir="${build.output.dir}/AppPlatform"
+                 stagingDir="${build.staging.dir}"
+                 resolverConfig="${resolver.config}"
+                 buildVersion="${build.version}"
+                 buildTimestamp="${build.timestamp}"
+                 runtimeVersion="${sdk.version}">
+            <sdk refid="sdk.classpath" />
+            <assets>
+                <fileset dir="${build.staging.assets.dir}" includes="*" excludes="*.acdl">
+                    <type type="file" />
+                </fileset>
+            </assets>
+        </publish>
+    </target>
+
+    <target name="build-setup">
+        <!-- Validate the setup -->
+        <fail unless="sag.install.dir" message="Required property 'sag.install.dir' is not set" />
+        <fail unless="build.version" message="Required property 'build.version' is not set" />
+        <fail unless="build.output.dir" message="Required property 'build.output.dir' is not set" />
+
+        <!-- Gather a list of target projects to build -->
+        <var name="projectList" value="" />
+
+        <if>
+            <isset property="build.source.project.dir" />
+            <then>
+                <for list="${build.source.project.dir}" param="project.dir" delimiter=";">
+                    <sequential>
+                        <var name="projectList" value="${projectList},@{project.dir}" />
+                    </sequential>
+                </for>
+            </then>
+        </if>
+
+        <if>
+            <isset property="build.source.dir" />
+            <then>
+                <for list="${build.source.dir}" param="project.set.dir" delimiter=";">
+                    <sequential>
+                        <for param="project.dir">
+                            <path>
+                                <dirset dir="@{project.set.dir}" includes="*" />
+                            </path>
+                            <sequential>
+                                <var name="projectList" value="${projectList},@{project.dir}" />
+                            </sequential>
+                        </for>
+                    </sequential>
+                </for>
+            </then>
+        </if>
+
+        <!-- Create the resolver cache directory in case it is missing
+             NOTE This will hold the cached SDK OSGi R5 index.
+         -->
+        <mkdir dir="${build.staging.dir}" />
+
+        <!-- Create the directory where we accumulate assets for dependency resolution -->
+        <mkdir dir="${build.staging.assets.dir}" />
+    </target>
+
+    <!-- Build everything in reverse-dependency order -->
+    <target name="build-components" depends="build-setup, clean">
+        <buildComponents projectList="${projectList}"
+                         makerTargetPrefix="make"
+                         buildDirName="${component.build.dir.name}"
+                         buildVersion="${build.version}"
+                         buildTimestamp="${build.timestamp}" />
+    </target>
+
+    <!--
+        Consume pre-built artifacts from external directories and publish them to the asset repo.
+    -->
+    <target name="build-externals" depends="build-setup, clean">
+        <if>
+            <and>
+                <isset property="build.external.dir"/>
+                <not><equals arg1="${build.external.dir}" arg2=""/></not>
+            </and>
+            <then>
+                <copy todir="${build.staging.assets.dir}" verbose="true">
+                    <fileset dir="${build.external.dir}" includes="*.jar, *.properties, *.war">
+                        <type type="file" />
+                    </fileset>
+                </copy>
+            </then>
+        </if>
+    </target>
+
+    <!--
+        Deletes the build working directories of all projects.
+        Deletes the publication staging directory. 
+    -->
+    <target name="clean" 
+            description="Cleans the project build directories" 
+            depends="build-setup">
+
+        <buildComponents projectList="${projectList}" 
+                         makerTargetPrefix="make-clean" 
+                         buildDirName="${component.build.dir.name}"
+                         buildVersion="${build.version}"
+                         buildTimestamp="${build.timestamp}"/>
+
+        <delete dir="${build.staging.assets.dir}" failonerror="true" />
+
+        <!-- Delete the SDK index only if explicitly required -->
+        <if>
+            <istrue value="${app.clean.workspace}"/>
+            <then>
+                <delete dir="${build.staging.dir}" failonerror="true" />
+            </then>
+        </if>
+    </target>
+
+    <!-- 
+        Maker targets 
+    -->
+    <target name="make-generic">
+        <antcall target="make" inheritrefs="true" />
+    </target>
+
+    <target name="make-bundle">
+        <antcall target="make" inheritrefs="true" />
+    </target>
+
+    <target name="make-war">
+        <antcall target="make" inheritrefs="true" />
+    </target>
+
+    <target name="make-config">
+        <antcall target="make" inheritrefs="true">
+            <!-- Configs are built in the build directory of the parent project -->
+            <param name="component.build.dir" 
+                   value="${component.home}/../../../${component.build.dir.name}" />
+        </antcall>
+    </target>
+
+    <target name="make">
+        <echo message="Making ${component.type}: ${component.name}" />
+
+        <ant antfile="${buildfile.dir}/build-${component.type}.xml" 
+             dir="${component.home}"
+             inheritrefs="false"
+             inheritall="false">
+
+            <!-- Initial component definition -->
+            <property name="component.name" value="${component.name}" />
+            <property name="component.type" value="${component.type}" />
+            <property name="component.home" value="${component.home}" />
+            <property name="component.dependencies" value="${component.dependencies}" />
+            <property name="component.dependencies.external" value="${component.dependencies.external}" />
+
+            <!-- Resolved component build configuration -->
+            <property name="component.build.file" value="${component.build.file}" />
+            <property name="component.build.dir" value="${component.build.dir}" />
+            <property name="component.build.version" value="${component.build.version}" />
+            <property name="component.build.timestamp" value="${component.build.timestamp}" />
+            <property name="component.build.dependencies" value="${component.build.dependencies}" />
+            <property name="component.build.dependencies.external" value="${component.build.dependencies.external}" />
+
+            <!-- SDK -->
+            <reference refid="sdk.classpath" />
+        </ant>
+
+        <!-- Copy the build output to the directory where the resolver will run on the entire solution -->
+        <copy todir="${build.staging.assets.dir}" verbose="true">
+            <fileset dir="${component.build.dir}" includes="${component.build.file}" erroronmissingdir="false">
+                <type type="file" />
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- 
+        Cleaner targets 
+    -->
+    <target name="make-clean-generic">
+        <antcall target="make-clean" inheritrefs="true" />
+    </target>
+
+    <target name="make-clean-bundle">
+        <antcall target="make-clean" inheritrefs="true" />
+    </target>
+
+    <target name="make-clean-war">
+        <antcall target="make-clean" inheritrefs="true" />
+    </target>
+
+    <target name="make-clean-config">
+        <antcall target="make-clean" inheritrefs="true" />
+    </target>
+
+    <target name="make-clean">
+        <echo message="Cleaning ${component.type}: ${component.name}" />
+
+        <ant antfile="${buildfile.dir}/build-${component.type}.xml" 
+             target="clean"
+             dir="${component.home}"
+             inheritrefs="true" />
+    </target>
+</project>

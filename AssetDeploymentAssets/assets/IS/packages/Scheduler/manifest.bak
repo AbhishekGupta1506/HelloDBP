@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">no</value>
+  <value name="system_package">no</value>
+  <value name="version">1.0</value>
+  <null name="startup_services"/>
+  <null name="shutdown_services"/>
+  <null name="replication_services"/>
+  <null name="requires"/>
+  <null name="listACL"/>
+  <value name="name">Scheduler</value>
+  <value name="build">9.0.2</value>
+  <value name="description"></value>
+  <value name="time">2013-03-19 12:37:38 EDT</value>
+  <value name="jvm_version">1.7.0_17</value>
+  <value name="publisher">rdvmalv20.AME.ad.sag</value>
+  <value name="patch_nums"></value>
+  <value name="webappLoad">yes</value>
+</Values>

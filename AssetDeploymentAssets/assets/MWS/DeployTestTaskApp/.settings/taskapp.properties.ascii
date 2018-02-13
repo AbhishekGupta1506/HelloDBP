@@ -1,0 +1,7 @@
+#Task App Properties
+#Fri Dec 10 15:20:51 PST 2010
+708F0279-CDEC-A308-F018-E90393A483AB.taskInboxBarPortlet=DeployTestTaskInboxBar
+708F0279-CDEC-A308-F018-E90393A483AB.taskInboxResultsPortlet=DeployTestTaskInboxResults
+708F0279-CDEC-A308-F018-E90393A483AB.taskStartPortlet=DeployTestTaskStart
+708F0279-CDEC-A308-F018-E90393A483AB.taskViewPortlet=DeployTestTaskView
+708F0279-CDEC-A308-F018-E90393A483AB.taskOverviewPortlet=DeployTestTaskOverview

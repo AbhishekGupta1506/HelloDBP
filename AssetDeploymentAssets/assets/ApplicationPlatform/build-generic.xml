@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Asset build for components with user-supplied build scripts" default="build" basedir=".">
+    <!-- Configuration properties supplied by the App Platform build script
+    
+    Component description:
+    <property name="component.name" value="name of the component" />
+    <property name="component.type" value="type of the component" />
+    <property name="component.home" value="directory where the component code is" />
+    <property name="component.dependencies" value="list of the component.name-s of dependency projects" />
+    
+    Component build configuration:
+    <property name="component.build.file" value="name of the resulting file" />
+    <property name="component.build.dir" value="dirctory where to output the component.file" />
+    <property name="component.build.dependencies" value="a transitively closed Path to the jars of all dependency projects" />
+    <property name="component.build.version" value="version of this build." />
+    <property name="component.build.timestamp" value="time of this build." />
+    -->
+        
+    <target name="setup">
+        <mkdir dir="${component.build.dir}" />
+    </target>
+
+    <target name="build" depends="setup">
+        <!-- 
+            Call the external file to do the heavy lifting
+            It only needs to produce a result in ${component.build.dir}/${component.build.file}
+        -->
+        <ant antfile="assetBuild.xml" dir="${component.home}" inheritrefs="true" />
+
+        <fail message="Generic build script did not produce the expected file: ${component.build.dir}/${component.build.file}">
+            <condition>
+                <not><available file="${component.build.dir}/${component.build.file}" /></not>
+            </condition>
+        </fail>
+    </target>
+
+    <target name="clean">
+        <delete dir="${component.build.dir}" failonerror="false" />
+    </target>
+</project>

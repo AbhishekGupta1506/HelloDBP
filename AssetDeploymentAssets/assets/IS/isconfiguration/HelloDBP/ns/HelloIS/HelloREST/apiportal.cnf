@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <value name="http://usvajagt01.eur.ad.sag:18101:default">6c869801-a3ce-11e7-20bb-005056ac24a7</value>
+  </record>
+</IDataXMLCoder>

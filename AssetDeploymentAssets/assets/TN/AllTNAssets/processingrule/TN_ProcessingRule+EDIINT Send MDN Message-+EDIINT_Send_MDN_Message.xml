@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">8</value>
+      <value name="minor">2</value>
+    </record>
+    <idatacodable name="rules" javaclass="com.wm.app.tn.route.RoutingRuleList">
+      <list name="contents">
+        <record javaclass="com.wm.app.tn.route.RoutingRule">
+          <value name="RuleName">EDIINT Send MDN Message</value>
+          <value name="RuleDescription">Default rule for sending EDIINT MDN message</value>
+          <value name="Disabled?">false</value>
+          <array name="SenderID" type="value" depth="1">
+          </array>
+          <array name="ReceiverID" type="value" depth="1">
+          </array>
+          <array name="DocTypeID" type="value" depth="1">
+            <value>EDIINT MDN--------------</value>
+          </array>
+          <array name="UserStatus" type="value" depth="1">
+            <value>SendMDNMsg</value>
+          </array>
+          <value name="HasErrors">don't care</value>
+          <record name="PreRoutingFlags" javaclass="com.wm.app.tn.route.PreRoutingFlags">
+            <value name="verify?">don't care</value>
+            <value name="validate?">don't care</value>
+            <value name="persist?">don't care</value>
+            <value name="unique?">don't care</value>
+            <value name="persistOption?">don't care</value>
+            <null name="dupCheckSvc"/>
+          </record>
+          <null name="AlertID"/>
+          <null name="AlertType"/>
+          <null name="AlertSubject"/>
+          <null name="AlertMessage"/>
+          <array name="ResponseMessage" type="value" depth="1">
+            <value>text/plain</value>
+            <null/>
+          </array>
+          <null name="IntendedUserStatus"/>
+          <value name="ServiceName">wm.EDIINT.rules:sendMDN</value>
+          <null name="ServiceInput"/>
+          <value name="ServiceAsync?">sync</value>
+          <null name="SendTo"/>
+          <value name="LastModified">2011-01-07 14:55:15.292</value>
+          <null name="AttributeConditions"/>
+          <null name="DeliveryQueue"/>
+          <value name="RuleID">EDIINT Send MDN Message-</value>
+          <value name="LastChangeID">53o6p0005lfsmjcs00000021</value>
+          <value name="LastChangeUser">Administrator</value>
+          <value name="LastChangeSession">startup</value>
+          <number name="RuleIndex" type="java.lang.Integer">0</number>
+          <null name="SenderGroup"/>
+          <null name="ReceiverGroup"/>
+          <null name="SenderDisplayName"/>
+          <null name="ReceiverDisplayName"/>
+          <array name="DocTypeName" type="value" depth="1">
+            <value>EDIINT MDN</value>
+          </array>
+          <null name="SetBAMAction"/>
+          <null name="SenderGroup"/>
+          <null name="ReceiverGroup"/>
+          <null name="ToMwSString"/>
+        </record>
+      </list>
+    </idatacodable>
+  </record>
+</IDataXMLCoder>

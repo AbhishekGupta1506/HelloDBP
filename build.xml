@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project xmlns="antlib:org.apache.tools.ant" xmlns:if="ant:if" xmlns:unless="ant:unless" name="bpms-cluster" default="all" basedir=".">
+	<description>
+	    BPMS provision and migration
+    </description>
+
+	<import file="antcc/main.xml" />
+
+	<target name="up" description="Setup BPMS cluster" depends="sagenvInit2">
+		<antcall target="apply">
+			<param name="t" value="templates/sag-bpm" />
+		</antcall>
+	</target>
+
+	<target name="migrate" description="Migrate BPMS cluster" depends="sagenvInit2">
+		<antcall target="sagenv.migrate">
+			<param name="t" value="templates/sag-bpm" />
+		</antcall>
+	</target>
+
+	<target name="init" description="Init Command Central" depends="sagenvInit2">
+		<antcall target="apply">
+			<param name="alias" value="sag-repos-ga"/>
+		</antcall>
+		<antcall target="mirrors" />
+	</target>	
+
+</project>

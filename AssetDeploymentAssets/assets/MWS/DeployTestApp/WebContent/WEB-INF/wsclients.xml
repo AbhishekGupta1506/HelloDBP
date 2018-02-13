@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclients>
+<webservice authenticationMethod="1" isConnectionURL="http://localhost:5555/ws/WmWebSrv.wsd:addIntsWSDL?WSDL" isService="WmWebSrv.wsd:addIntsWSDL" name="addIntsWSDL" package="com.webmethods.caf.is.wsclient.wmwebsrv.wsd.addintswsdl" password="{DES}vrFIelCdkow=" requiresAuth="true" soapLibrary="glue" useNamespaceForPackage="false" username="Administrator" wsdlFile="src/com/webmethods/caf/is/wsclient/wmwebsrv/wsd/addintswsdl/addIntsWSDL.wsdl" wsdlURL="http://localhost:5555/ws/WmWebSrv.wsd:addIntsWSDL?WSDL">
+<wsproxy className="com.webmethods.caf.is.wsclient.wmwebsrv.wsd.addintswsdl.IaddInts_PortType">
+<wsclient managedBean="AddInts" operation="addInts"/>
+</wsproxy>
+<generatedfile>com\webmethods\caf\is\wsclient\wmwebsrv\wsd\addintswsdl\IaddInts_PortType.java</generatedfile>
+<generatedfile>com\webmethods\caf\is\wsclient\wmwebsrv\wsd\addintswsdl\addIntsWSDLHelper.java</generatedfile>
+<generatedfile>com\webmethods\caf\is\wsclient\wmwebsrv\wsd\addintswsdl\addIntsInput.java</generatedfile>
+<generatedfile>com\webmethods\caf\is\wsclient\wmwebsrv\wsd\addintswsdl\addIntsOutput.java</generatedfile>
+<generatedfile>com\webmethods\caf\is\wsclient\wmwebsrv\wsd\addintswsdl\addIntsWSDL.map</generatedfile>
+</webservice>
+</wsclients>

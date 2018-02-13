@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wm_xt_skin
+	cssPreview='color:#2608f7;background-color:#f4f1f1;'
+	serversideResourcePath='/ui/skins/DeployTestSkin/'
+	description='Deploy Test Skin'
+	clientsideResourcePath='/ui/skins/DeployTestSkin/'
+	name='DeployTestSkin'
+	version='1.0'
+	alias='skin.DeployTestSkin'
+></wm_xt_skin>

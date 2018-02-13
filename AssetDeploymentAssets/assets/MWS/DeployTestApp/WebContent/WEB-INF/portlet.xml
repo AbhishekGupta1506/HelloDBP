@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd ">
+	<portlet>
+		<portlet-name>test</portlet-name>
+		<portlet-class>com.webmethods.caf.faces.portlet.FacesPortlet</portlet-class>
+		<init-param>
+			<name>com.webmethods.caf.faces.portlet.INIT_VIEW</name>
+			<value>/Test/default.view</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>com.webmethods.caf.test.TestResources</resource-bundle>
+		<portlet-info>
+			<title>test</title>
+		</portlet-info>
+	</portlet>
+	<user-attribute>
+		<name>user.default.time_zone</name>
+	</user-attribute>
+	<user-attribute>
+		<name>user.default.time.format</name>
+	</user-attribute>
+	<user-attribute>
+		<name>user.default.date.format</name>
+	</user-attribute>
+	<user-attribute>
+		<name>user.default.number.format</name>
+	</user-attribute>
+</portlet-app>

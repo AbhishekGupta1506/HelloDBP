@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><ns2:decisionTable xmlns:ns2="http://com.softwareag.rules/dt" xmlns:ns1="http://com.softwareag.rules/metaphor" xmlns:ns3="http://com.softwareag.rules/er" processingMode="inferentialProcessing" version="10.1.0.0.172">
+    <ns1:comment/>
+    <ns1:actions/>
+    <ns1:parameters>
+        <ns1:parameter ioKey="71da0172:13b3c752e5b:-7e6b" matchAny="false" name="DM1_1" parameterType="both" type="data model">
+            <ns1:model>/TestRuleProject1/Data Models/DM1.datamodel</ns1:model>
+        </ns1:parameter>
+    </ns1:parameters>
+    <ns1:fields>
+        <ns1:field id="e28cd30a-1b5e-40b3-b063-d61e4747472a">
+            <ns1:name>type</ns1:name>
+            <ns1:fieldType>condition</ns1:fieldType>
+            <ns1:slotKey>/type;1;0</ns1:slotKey>
+            <ns1:ioKey>71da0172:13b3c752e5b:-7e6b</ns1:ioKey>
+            <ns1:innerModel>/TestRuleProject1/Data Models/DM1.datamodel</ns1:innerModel>
+            <ns1:qualifiedName>DM1_1.type</ns1:qualifiedName>
+            <ns1:suppressWarnings/>
+        </ns1:field>
+        <ns1:field id="fa9d4bd4-640b-4a7e-a8e3-0a426349149b">
+            <ns1:name>type_1</ns1:name>
+            <ns1:fieldType>result</ns1:fieldType>
+            <ns1:slotKey>/type;1;0</ns1:slotKey>
+            <ns1:ioKey>71da0172:13b3c752e5b:-7e6b</ns1:ioKey>
+            <ns1:innerModel>/TestRuleProject1/Data Models/DM1.datamodel</ns1:innerModel>
+            <ns1:qualifiedName>DM1_1.type</ns1:qualifiedName>
+            <ns1:suppressWarnings/>
+        </ns1:field>
+    </ns1:fields>
+    <ns1:suppressWarnings/>
+    <ns2:rules>
+        <ns2:rule>
+            <ns2:id>25637fc9-5ad4-4200-b896-2c8d26475434</ns2:id>
+            <ns2:conditions>
+                
+            <ns2:conditionCell>
+                    <ns2:id>85ab927c-77f3-469a-8e36-47dc619a25bd</ns2:id>
+                    <ns2:condition>
+                    
+                    
+                    <ns1:operatorType>EQ</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>Repository</ns1:literal>
+                    </ns1:value>
+                <ns1:expressionProperties>
+                            <ns1:fieldId>e28cd30a-1b5e-40b3-b063-d61e4747472a</ns1:fieldId>
+                            <ns1:suppressWarnings/>
+                        </ns1:expressionProperties>
+                    </ns2:condition>
+                </ns2:conditionCell>
+            </ns2:conditions>
+            <ns2:results>
+                
+            <ns2:resultCell>
+                    <ns2:id>fe34951b-b22c-4fc4-a8fd-d230a8002f29</ns2:id>
+                    <ns2:result>
+                    
+                    
+                    <ns1:operatorType>AS</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>OfflineDeployment</ns1:literal>
+                    </ns1:value>
+                <ns1:expressionProperties>
+                            <ns1:fieldId>fa9d4bd4-640b-4a7e-a8e3-0a426349149b</ns1:fieldId>
+                            <ns1:suppressWarnings/>
+                        </ns1:expressionProperties>
+                    </ns2:result>
+                </ns2:resultCell>
+            </ns2:results>
+            <ns2:suppressWarnings/>
+        </ns2:rule>
+    </ns2:rules>
+</ns2:decisionTable>

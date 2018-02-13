@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='US-ASCII'?>
+<rulebase xmlns='http://www.jessrules.com/JessML/1.0'>
+<module>
+  <name>$$MODULENAME$$</name>
+</module>
+
+<funcall>
+  <name>import</name>
+  <value type='SYMBOL'>pkgRulesProject.pkgData20Models.DMProcAppsAutomation2eDoc3aBigDoc_LaunchData</value>
+  
+</funcall>
+
+<template>
+  <name>$$MODULENAME$$::DMProcAppsAutomation2eDoc3aBigDoc_LaunchData</name>
+  <comment>$JAVA-OBJECT$ pkgRulesProject.pkgData20Models.DMProcAppsAutomation2eDoc3aBigDoc_LaunchData</comment>
+  <properties>
+    <property>
+      <name>from-class</name>
+      <value type='SYMBOL'>pkgRulesProject.pkgData20Models.DMProcAppsAutomation2eDoc3aBigDoc_LaunchData</value>
+    </property>
+    <property>
+      <name>slot-specific</name>
+      <value type='SYMBOL'>TRUE</value>
+    </property>
+  </properties>
+</template>
+
+<funcall>
+  <name>import</name>
+  <value type='SYMBOL'>pkgRulesProject.pkgData20Models.DMBigDoc</value>
+  
+</funcall>
+
+<template>
+  <name>$$MODULENAME$$::DMBigDoc</name>
+  <comment>$JAVA-OBJECT$ pkgRulesProject.pkgData20Models.DMBigDoc</comment>
+  <properties>
+    <property>
+      <name>from-class</name>
+      <value type='SYMBOL'>pkgRulesProject.pkgData20Models.DMBigDoc</value>
+    </property>
+    <property>
+      <name>slot-specific</name>
+      <value type='SYMBOL'>TRUE</value>
+    </property>
+  </properties>
+</template>
+
+<rule>
+  <name>$$MODULENAME$$::Decision_Tables/DT__Simple.decisiontable_dtrule1</name>
+  <lhs>
+    <group>
+      <name>and</name>
+      <pattern>
+        <name>$$MODULENAME$$::DMBigDoc</name>
+        <slot>
+          <name>OBJECT</name>
+          <test>
+            <type>eq</type>
+            <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+            
+          </test>
+          <test>
+            <type>eq</type>
+            <conjunction>and</conjunction>
+            <funcall>
+              <name>=</name>
+              <funcall>
+                <name>call</name>
+                <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+                
+                <value type='SYMBOL'>getParameterName</value>
+                
+              </funcall>
+              
+              <value type='STRING'>BigDoc</value>
+              
+            </funcall>
+            
+          </test>
+        </slot>
+      </pattern>
+      <pattern>
+        <name>$$MODULENAME$$::DMProcAppsAutomation2eDoc3aBigDoc_LaunchData</name>
+        <slot>
+          <name>slotStartFilter</name>
+          <test>
+            <type>eq</type>
+            <value type='VARIABLE'>s0</value>
+            
+          </test>
+          <test>
+            <type>neq</type>
+            <conjunction>and</conjunction>
+            <value type='SYMBOL'>nil</value>
+            
+          </test>
+          <test>
+            <type>eq</type>
+            <conjunction>and</conjunction>
+            <funcall>
+              <name>checkEQ</name>
+              <value type='VARIABLE'>s0</value>
+              
+              <funcall>
+                <name>ParameterHelper.getJessString</name>
+                <value type='STRING'>ProcAppsAutomation/SimpleDTProcess</value>
+                
+              </funcall>
+              
+            </funcall>
+            
+          </test>
+        </slot>
+        <slot>
+          <name>OBJECT</name>
+          <test>
+            <type>eq</type>
+            <value type='VARIABLE'>dm0</value>
+            
+          </test>
+          <test>
+            <type>eq</type>
+            <conjunction>and</conjunction>
+            <funcall>
+              <name>matchesMember</name>
+              <value type='VARIABLE'>dm0</value>
+              
+              <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+              
+              <funcall>
+                <name>create$</name>
+                <value type='STRING'>/LaunchData;2;0</value>
+                
+              </funcall>
+              
+            </funcall>
+            
+          </test>
+        </slot>
+      </pattern>
+    </group>
+  </lhs>
+  <rhs>
+    <funcall>
+      <name>setMember</name>
+      <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+      
+      <funcall>
+        <name>create$</name>
+        <value type='STRING'>/LaunchData;2;0</value>
+        
+        <value type='STRING'>/ExecutedBy;1;0</value>
+        
+      </funcall>
+      
+      <funcall>
+        <name>ParameterHelper.getJessString</name>
+        <value type='STRING'>ProcApps BVT Execution</value>
+        
+      </funcall>
+      
+      <value type='SYMBOL'>FALSE</value>
+      
+      <value type='SYMBOL'>FALSE</value>
+      
+    </funcall>
+  </rhs>
+</rule>
+
+<rule>
+  <name>$$MODULENAME$$::Decision_Tables/DT__Simple.decisiontable_dtrule2</name>
+  <lhs>
+    <group>
+      <name>and</name>
+      <pattern>
+        <name>$$MODULENAME$$::DMBigDoc</name>
+        <slot>
+          <name>OBJECT</name>
+          <test>
+            <type>eq</type>
+            <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+            
+          </test>
+          <test>
+            <type>eq</type>
+            <conjunction>and</conjunction>
+            <funcall>
+              <name>=</name>
+              <funcall>
+                <name>call</name>
+                <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+                
+                <value type='SYMBOL'>getParameterName</value>
+                
+              </funcall>
+              
+              <value type='STRING'>BigDoc</value>
+              
+            </funcall>
+            
+          </test>
+        </slot>
+      </pattern>
+      <pattern>
+        <name>$$MODULENAME$$::DMProcAppsAutomation2eDoc3aBigDoc_LaunchData</name>
+        <slot>
+          <name>slotStartFilter</name>
+          <test>
+            <type>eq</type>
+            <value type='VARIABLE'>s1</value>
+            
+          </test>
+          <test>
+            <type>neq</type>
+            <conjunction>and</conjunction>
+            <value type='SYMBOL'>nil</value>
+            
+          </test>
+          <test>
+            <type>eq</type>
+            <conjunction>and</conjunction>
+            <funcall>
+              <name>checkEQ</name>
+              <value type='VARIABLE'>s1</value>
+              
+              <funcall>
+                <name>ParameterHelper.getJessString</name>
+                <value type='STRING'>ProcAppsAutomation/SimpleRuleSetProcess</value>
+                
+              </funcall>
+              
+            </funcall>
+            
+          </test>
+        </slot>
+        <slot>
+          <name>OBJECT</name>
+          <test>
+            <type>eq</type>
+            <value type='VARIABLE'>dm1</value>
+            
+          </test>
+          <test>
+            <type>eq</type>
+            <conjunction>and</conjunction>
+            <funcall>
+              <name>matchesMember</name>
+              <value type='VARIABLE'>dm1</value>
+              
+              <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+              
+              <funcall>
+                <name>create$</name>
+                <value type='STRING'>/LaunchData;2;0</value>
+                
+              </funcall>
+              
+            </funcall>
+            
+          </test>
+        </slot>
+      </pattern>
+    </group>
+  </lhs>
+  <rhs>
+    <funcall>
+      <name>setMember</name>
+      <value type='VARIABLE'>_DMBigDoc_BigDoc</value>
+      
+      <funcall>
+        <name>create$</name>
+        <value type='STRING'>/LaunchData;2;0</value>
+        
+        <value type='STRING'>/ExecutedBy;1;0</value>
+        
+      </funcall>
+      
+      <funcall>
+        <name>ParameterHelper.getJessString</name>
+        <value type='STRING'>ProcApps BVT Execution</value>
+        
+      </funcall>
+      
+      <value type='SYMBOL'>FALSE</value>
+      
+      <value type='SYMBOL'>FALSE</value>
+      
+    </funcall>
+  </rhs>
+</rule>
+
+</rulebase>

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPINVOKE SERVICE="pub.string:trim" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CHAR_OUT;1;0" TO="/inString;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/value;1;0" TO="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CHAR_OUT;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPINVOKE SERVICE="pub.string:trim" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CHARACTER_OUT;1;0" TO="/inString;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/value;1;0" TO="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CHARACTER_OUT;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="com.webmethods.adapters.jdbc.services.insert.oracle._10g:InsertResults" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">InsertResultsInput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">BLOB_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">CHAR_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">CHARACTER_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">CLOB_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DATE_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DEC_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DECIMAL_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DOUBLEPRECISION_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.lang.Double</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">FLOAT_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.lang.Double</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">INT_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">INTEGER_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">LONG_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">NCHAR_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">NCLOB_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">NUMBER_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">NVARCHAR2_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">RAW_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">REAL_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.lang.Double</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">ROWID_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">SMALLINT_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="wrapper_type">java.math.BigDecimal</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">TIMESTAMP_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">UROWID_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">VARCHAR2_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">$connectionName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/INT_OUT;3.11;0" TO="/InsertResultsInput;2;0/INT_COL;3.11;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/INTEGER_OUT;3.11;0" TO="/InsertResultsInput;2;0/INTEGER_COL;3.11;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/REAL_OUT;3.4;0" TO="/InsertResultsInput;2;0/REAL_COL;3.4;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/SMALLINT_OUT;3.11;0" TO="/InsertResultsInput;2;0/SMALLINT_COL;3.11;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/DOUBLEPRECISION_OUT;3.4;0" TO="/InsertResultsInput;2;0/DOUBLEPRECISION_COL;3.4;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/FLOAT_OUT;3.4;0" TO="/InsertResultsInput;2;0/FLOAT_COL;3.4;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/NUMBER_OUT;3.11;0" TO="/InsertResultsInput;2;0/NUMBER_COL;3.11;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/DECIMAL_OUT;3.11;0" TO="/InsertResultsInput;2;0/DECIMAL_COL;3.11;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/DEC_OUT;3.11;0" TO="/InsertResultsInput;2;0/DEC_COL;3.11;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/BLOB_OUT;3;0" TO="/InsertResultsInput;2;0/BLOB_COL;3;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/DATE_OUT;3;0" TO="/InsertResultsInput;2;0/DATE_COL;3;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/RAW_OUT;3;0" TO="/InsertResultsInput;2;0/RAW_COL;3;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/LONG_OUT;1;0" TO="/InsertResultsInput;2;0/LONG_COL;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/VARCHAR2_OUT;1;0" TO="/InsertResultsInput;2;0/VARCHAR2_COL;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CLOB_OUT;1;0" TO="/InsertResultsInput;2;0/CLOB_COL;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CHAR_OUT;1;0" TO="/InsertResultsInput;2;0/CHAR_COL;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument/CHARACTER_OUT;1;0" TO="/InsertResultsInput;2;0/CHARACTER_COL;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">InsertResultsInput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">BLOB_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">CLOB_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DATE_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DEC_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DECIMAL_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">DOUBLEPRECISION_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">FLOAT_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">INT_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">INTEGER_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">LONG_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">NUMBER_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">RAW_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">REAL_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">SMALLINT_COL</value>
+            <value name="field_type">object</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">VARCHAR2_COL</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">InsertResultsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/InsertResultsInput;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument;4;0;com.webmethods.adapters.jdbc.notifications.storedprocedure.oracle.V10g:SPNotificationMultipleOutPublishDocument">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+</FLOW>
