@@ -435,6 +435,7 @@ templates:
       Deployer:
       NUMDeployer:
       wmprt:
+      jdcbAdapter:
 #      DBO:
       WPEDesigner:
       integrationServer: # the core IS product that owns the instance
