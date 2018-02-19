@@ -444,7 +444,7 @@ templates:
           jmx.port:        ${is.jmx.port}
           license.file:    IntegrationServer/config/licenseKey.xml
           install.service: ${is.install.service}
-          package.list:    WmMonitor,WmTaskClient,WmBusinessRules,WmDeployer,WmNUMDeployer,WmPRT,WmDesigner,WmTCDBAdapter, WmJDBCAdapter
+          package.list:    WmMonitor,WmTaskClient,WmBusinessRules,WmDeployer,WmNUMDeployer,WmPRT,WmDesigner,WmTCDBAdapter,WmJDBCAdapter
           db.type:         
           db.url:          
           db.username:     
