@@ -44,6 +44,9 @@ services:
     ports: # export all known ports for easy testing, but dont statically bind them to allow CI
       - target: 8092 # SPM
       - target: 5555 # IS
+      - target: 9072 # APIGateway
+      - target: 18101 # APIPortal
+      - target: 9240 # Event Data Store
     environment:
       - CC_AUTO_REGISTER=0
 

@@ -102,6 +102,7 @@ environments:
     
     is.license.key:      "0000364857_PIE_10.0_PROD_LNXAMD64"
     rules.license.key:   "0000365114_WOK_10.0_PROD_LNXAMD64"
+    apigateway.license.key: "0000337677_YAIAA_10.0_PROD_LNXAMD64"
 #    dbo.license.key:     "*_DBOAA_10.*_*_${os.platform}"
  
     # My webMethods Server
@@ -129,6 +130,12 @@ environments:
     tdb.fixes:            ALL
     tdb.memory.init:      128                # minimil memory configuration
     tdb.memory.max:       512                # minimal memory configuration
+    
+    #APIGateway
+    YAI.fixes:            [wMFix.APIGateway,wMFix.integrationServer.Core]
+    
+    #APIPortal
+    YAP.fixes:            ALL
 
   server1:               # all in one installation
     spm.host:            dev1                     # REQUIRED for all in one installation as default host
@@ -240,7 +247,14 @@ layers:
   tdb:
     description: Install TDB
     templates:   tdb-server    
-
+    
+  APIGateway:
+    description: Install APIGateway
+    templates: api-gateway
+  APIPortal:
+     description: Install APIPortal
+     templates: api-portal
+     
 ###
 # Inline templates - customized product list, fix list, runtime instances, files and configuration
 ###
@@ -727,6 +741,33 @@ templates:
       TDBEhcache:
       TDBConsole:
       TDBStore:
+  api-gateway:
+     description: API gateway installation
+     licenses:
+      "IntegrationServer/config/licenseKey.xml": "${apigateway.license.key}"
+      "IntegrationServer/instances/${is.instance.name}/config/licenseKey.xml": "${apigateway.license.key}" 
+     fixes: ${YAI.fixes}
+     products:
+      YAI:
+#      DBO:
+      integrationServer: # the core IS product that owns the instance
+        ${is.instance.name}:
+          primary.port:    ${is.primary.port}
+          diagnostic.port: ${is.diagnostic.port}
+          jmx.port:        ${is.jmx.port}
+          license.file:    IntegrationServer/config/licenseKey.xml
+          install.service: ${is.install.service}
+          package.list:    WmAPIGateway
+          db.type:         
+          db.url:          
+          db.username:     
+          db.password:     
+          db.alias:     Default
+  api-portal:
+     description: API Portal Installation
+     fixes: ${YAP.fixes}
+     products:
+        YAP:        
       
 #    actions:
 #      permission:
@@ -759,6 +800,8 @@ provision:
     tc:    dev1
     tdb:   dev1
     bpm:   dev1
+    APIGateway: dev2
+    APIPortal: dev2
 #    tools: dev1
     
 
@@ -840,6 +883,8 @@ nodes:
   bpmserver1:
     dev1:
       host: ${spm.host}
+    dev2: 
+      host: ${spm.host2}
       
   bpmstatelesscluster2:
     dev1: 
