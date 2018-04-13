@@ -1,0 +1,26 @@
+//*****************************************************************************
+// Title:         HelloQuery
+// Description:   HelloQuery description
+// Dependencies:  None
+// Author:        Administrator
+//
+//*****************************************************************************
+
+
+
+using HelloEvents.ThingEvent;
+query HelloQuery {	
+	inputs  {
+		ThingEvent() key Id within 15 sec;
+
+	}
+
+	find ThingEvent as t1 -> ThingEvent as t2
+	where (t2.Value - t1.Value) / t1.Value >= 1  {
+
+	
+		%custom("title":"Send Alert","description":"") {
+			send HelloEvents.ThingAlert( t1.Id, "Thing " + Things.getThingName(t1.Id) + " changed too much too fast.", t1.EventTime, "", new sequence<integer> ) to HelloEvents.ThingAlert.CHANNEL;
+		}
+	}
+}

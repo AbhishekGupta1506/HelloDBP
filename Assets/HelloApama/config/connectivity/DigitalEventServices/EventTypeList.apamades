@@ -1,0 +1,4 @@
+#EventTypeList.apamades 10.1.0.0
+#This is an internal file and is not user-editable.
+HelloEvents.ThingEvent,42c16f88fe707af3,SELECTED
+HelloEvents.ThingAlert,9a2dc16d7e97f8ec,SELECTED
