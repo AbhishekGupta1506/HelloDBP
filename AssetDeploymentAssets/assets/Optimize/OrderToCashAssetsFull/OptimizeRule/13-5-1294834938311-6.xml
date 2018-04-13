@@ -1,7 +1,0 @@
-<rule name= "13-5-1294834938311-6" revision= "1" lastRevision= "0" lastRevisionName= "null" revisionTime= "1299503585828" displayName= "OrderAmountExceededRule" author= "Administrator" description= "default" userDefined= "true" ruleName= "13-5-1294834938311-6" ruleType= "kpi" enabled= "true" sticky= "false" sixSigmaOn= "false" dataFilterViewID= "13-9-1294834851499-5" sla= "false" inCompliance= "false" >
-<expression intervalsToReach="1">
-<kpi propertyKey ="reading.value" category ="OrderToCash" >13-4-1294834700344-3</kpi>
-<greaterThan/>
-<number>50</number>
-</expression>
-</rule>

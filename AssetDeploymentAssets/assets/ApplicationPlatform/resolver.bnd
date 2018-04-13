@@ -1,4 +1,0 @@
--runfw org.eclipse.osgi
--runee JavaSE-1.8
-# Poulate this from config.ini
-#-runsystempackages: 

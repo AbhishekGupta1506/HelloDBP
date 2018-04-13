@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='US-ASCII'?>
-<rulebase xmlns='http://www.jessrules.com/JessML/1.0'>
-<function>
-  <name>startEngine</name>
-  <arguments>
-  </arguments>
-</function>
-
-</rulebase>

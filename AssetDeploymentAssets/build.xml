@@ -29,7 +29,10 @@
 		<!--record name="deployToCIOur.txt" action="stop"/ -->
 		<sleep seconds="30"/>
     </target>
-	
+	<target name="deployToCIDES" description="deploy to CI" depends="sagabeInit">
+		<cc command="exec provisioning assets dev1 ${asset.repo} install runtimeComponentId=OSGI-SPM-DES-DEPLOYER artifacts=DES:TypeRepository" format="tsv" output="build/logs/deployToCIOur.txt" />
+		<sleep seconds="30"/>
+    </target>
 	<target name="deployToCIMWS" description="deploy to CI" depends="sagabeInit">
 		<!--record name="deployToCIOur.txt" action="start"/ -->
        <cc command="exec provisioning assets local ${env.REPO} install runtimeComponentId=MwsProgramFiles-default artifacts=MWS:DeployTestTaskApp" format="tsv" output="build/logs/deployToCIOur.txt" />

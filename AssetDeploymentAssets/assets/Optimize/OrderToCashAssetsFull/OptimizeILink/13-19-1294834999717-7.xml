@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<intelligentLink name="13-19-1294834999717-7" revision="1" revisionTime="1299503341845" displayName="DataAccessWebServiceLink" author="Internal" description="" userDefined="true"><url>http://pcbgrospa.eur.ad.sag:5555/invoke/pub.optimize.mashzone.adapter/retrieveData</url><parameter><name>dataType</name><description>KPI_DEFINITION</description></parameter></intelligentLink>

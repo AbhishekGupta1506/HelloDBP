@@ -28,7 +28,7 @@ services:
       - cc
       - dev1
       - dev2
-      - devoracle
+    #  - devoracle
       - devtools
 
   dev1:
@@ -36,6 +36,11 @@ services:
     ports: # export all known ports for easy testing, but dont statically bind them to allow CI
       - target: 8092 # SPM
       - target: 5555 # IS
+      - target: 9340 #EDS
+      - target: 9410 #TDB
+      - target: 9000 #UM
+      - target: 8080 # presto
+      - target: 15903 #Apama
     environment:
       - CC_AUTO_REGISTER=0
 
@@ -43,7 +48,7 @@ services:
     image: daerepository03.eur.ad.sag:4443/ccdevops/commandcentral:10.1.0.4-node
     ports: # export all known ports for easy testing, but dont statically bind them to allow CI
       - target: 8092 # SPM
-      - target: 5555 # IS
+      - target: 5656 # IS
       - target: 9072 # APIGateway
       - target: 18101 # APIPortal
       - target: 9240 # Event Data Store

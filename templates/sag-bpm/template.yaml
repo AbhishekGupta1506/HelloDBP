@@ -52,7 +52,15 @@ environments:
     
     spm.host:            dev1
     spm.host2:           dev2
-
+    spm.hosttools:       devtools
+    
+    #EDS
+    eds.configure: [EventDataStore]
+    
+    #DES: DES Inline template parameters 
+    des.licenses.key.alias:  "0000028173_DEV_10.0_PROD_LNXAMD64"               #REQUIRED  
+    des.fixes:  ALL
+    des.configure: [DES]
     # Universal Messaging Server. See um-layer template for parameters documentation
 
     um.host:             ${spm.host}
@@ -127,16 +135,36 @@ environments:
 
     # TDB -- Added by ABG
     #tdb.tdbserver.license.key: ${} # REQUIRED: license key
-    tdb.fixes:            ALL
+    tdb.fixes:            [wMFix.TDBServer]
     tdb.memory.init:      128                # minimil memory configuration
     tdb.memory.max:       512                # minimal memory configuration
     
     #APIGateway
     YAI.fixes:            [wMFix.APIGateway,wMFix.integrationServer.Core]
+    Gateway.is.primary.port:     5656
+    Gateway.is.diagnostic.port:  9898
+    #is.jmx.port:         ${port.range}09
     
     #APIPortal
     YAP.fixes:            ALL
-
+    
+    #Apama
+    apama.configure:  [Apama]
+    apama.fixes:     ALL
+    apama.license.key.alias: "0000028129_PAMCO_10.0_PROD_LNXAMD64"
+    
+    #MashZone
+    mashzone.configure:    [MashZoneNG]
+    van.license.key.alias: "0000028172_VAN_10.0_PROD_LNXAMD64"                  #REQUIRED
+    jbp.license.key.alias: "0000028169_JBP_10.0_PROD_LNXAMD64"                  #REQUIRED
+    mashzone.fixes:        [wMFix.presto]
+    
+    #FIX
+    GAFix_Dev1Template:        [GAFix_Dev1Template]
+    dev1.product.fixes:    [wMFix.TDBServer,wMFix.presto]
+    GAFixAll_Template:     [GAFixAll_Template]
+    product.fixes.All: ALL
+    
   server1:               # all in one installation
     spm.host:            dev1                     # REQUIRED for all in one installation as default host
 
@@ -254,7 +282,28 @@ layers:
   APIPortal:
      description: Install APIPortal
      templates: api-portal
-     
+  
+  Apama:
+     description: Install Apama
+     templates:   ${apama.configure}
+  MashZone:
+     description: Install MashZone
+     templates:   ${mashzone.configure} 
+  DES:
+     description: Install DES
+     templates:   ${des.configure} 
+  EDS:
+     description: Install EDS
+     templates:   ${eds.configure}
+  GAFixDev1:
+     description: Install GA fixes on DEV1
+     templates:   ${GAFix_Dev1Template}
+  GAFixDev2:
+     description: Install GA fixes on DEV2
+     templates:   ${GAFixAll_Template}
+  GAFixDevtools:
+     description: Install GA fixes on devtools
+     templates:   ${GAFixAll_Template}  
 ###
 # Inline templates - customized product list, fix list, runtime instances, files and configuration
 ###
@@ -284,14 +333,32 @@ templates:
       DatabaseComponentConfigurator:
       DatabaseScripts:
 
-# Universal Messaging
 
+  DES:
+    licenses:
+       "common/DigitalEventServices/license/license.xml": ${des.licenses.key.alias}
+#    fixes: ${des.fixes}   
+    products:
+       DEV:                                                                 #Digital Event Services
+       DEVSharedLibs:                                                       #Infrastructure | Libraries | Digital Event Services
+       DEVSharedBundles:
+       DEVRuntime:       
+       DEVspm:                                                              #Digital Event Services Plug-in
+       EVSJDBCDriver:                                                       #Digital Event Persistence Driver 10.1 for JDBC
+  EventDataStore:
+     products:
+      CEL:                                                                  #Event Data Store
+      EVS:                                                                  #Infrastructure | Shared Platform | Bundles | Event Persistence API Bundles
+      ERSharedBundles:                                                      #Infrastructure | Shared Platform | Bundles | Event Routing | Shared Bundles    
+# Universal Messaging       
   um-server:                                   
     description: First UM server instance
     licenses:
       "UniversalMessaging/server/templates/licence.xml": "${um.license.key}"
-    fixes: ${um.fixes}
+#    fixes: ${um.fixes}
     products:
+      NUMClient:
+      NUMEnterpriseManager:
       NUMRealmServer:                                              # main UM product id
         ${um.instance.name}:                                       # instance realm name
           # src.instance.name: ${src.node.host}
@@ -345,7 +412,7 @@ templates:
     licenses:
       "common/conf/terracotta-license.key": "${tc.license.key}"
       "Terracotta/terracotta-license.key": "${tc.license.key}"
-    fixes: ${tc.fixes}
+#    fixes: ${tc.fixes}
     products:
       TES:
         default:
@@ -441,7 +508,7 @@ templates:
       "IntegrationServer/instances/${is.instance.name}/packages/WmBusinessRules/config/licenseKey.xml": "${rules.license.key}"
 #      "IntegrationServer/instances/${is.instance.name}/packages/WmDBO/config/licenseKey.xml": "${dbo.license.key}"  
       "common/conf/terracotta-license.key": "${tc.license.key}" 
-    fixes: ${is.fixes}
+#    fixes: ${is.fixes}
     products:
       brmspackage:
       Monitor:
@@ -607,7 +674,7 @@ templates:
                   
   mws-server:
     description: UI layer can be single server or a cluster
-    fixes: ${mws.fixes}
+#    fixes: ${mws.fixes}
     products:
       TaskEngineRuntime:
 #      integrationServerPortal:
@@ -719,7 +786,7 @@ templates:
     # License file needs to be configured in Designer preferences
     licenses: 
       "Designer/WmTestSuiteLicense.xml": "${testsuite.license.key}"
-    fixes: ${designer.fixes}
+#    fixes: ${designer.fixes}
     products:
       LDev: # Service Development
       vcs:  # Local version control
@@ -730,6 +797,14 @@ templates:
       DesignerBPM:
       DesignerSim:
       BPMDesignerDBO:
+      DesignerEDA:
+      BPMMetadata:
+      Eclipse:
+      DesignerCPP:
+      NUMDesigner:
+      BPMContentInt:
+      TESDES:
+      #PAMDesigner:
 
   tdb-server:
     files:
@@ -746,14 +821,14 @@ templates:
      licenses:
       "IntegrationServer/config/licenseKey.xml": "${apigateway.license.key}"
       "IntegrationServer/instances/${is.instance.name}/config/licenseKey.xml": "${apigateway.license.key}" 
-     fixes: ${YAI.fixes}
+#     fixes: ${YAI.fixes}
      products:
       YAI:
 #      DBO:
       integrationServer: # the core IS product that owns the instance
         ${is.instance.name}:
-          primary.port:    ${is.primary.port}
-          diagnostic.port: ${is.diagnostic.port}
+          primary.port:    ${Gateway.is.primary.port}
+          diagnostic.port: ${Gateway.is.diagnostic.port}
           jmx.port:        ${is.jmx.port}
           license.file:    IntegrationServer/config/licenseKey.xml
           install.service: ${is.install.service}
@@ -765,19 +840,40 @@ templates:
           db.alias:     Default
   api-portal:
      description: API Portal Installation
-     fixes: ${YAP.fixes}
+     licenses:
+      "API_Portal/license.xml": "Licenses/APIPortal101.xml"
+#     fixes: ${YAP.fixes}
      products:
         YAP:        
-      
-#    actions:
-#      permission:
-#        description: Provide permission to start and stop script of TDB
-#        phase: post
-#        target: CentOS
-#        failOnError: true
-#        script: |/bin/bash sh 'cd /opt/softwareag/' #            CALL TCDFilesPermission.sh
-
-# different deployment maps
+  #Inline template for Apama 
+  Apama:
+    licenses:                                                             #Licenses required while installing the product. LHS is the location where license needs to be placed in install dir
+      "Apama/work/license/ApamaServerLicense.xml": ${apama.license.key.alias}   #Licenses has to imported to cce in prior.
+    description: Apama                            #OPTIONAL
+#    fixes: ${apama.fixes}    
+    products:
+      PAMServer:                                                           
+      PAMspm:                                                  #Apama dasgBoard viewer
+      #PAMDesigner:                                                         #Apama designer plugin  
+      PAFFoundation:                                                       #Apama | Capital Markets Foundation 
+      PAMShared:                                                           #Apama | Shared Libraries
+      #PAT:                                                                 #Infrastructure | Predictive Analytics Engine   
+  #MashZone Inline template
+  MashZoneNG:
+    description: installs presto products                                   #OPTIONAL
+    licenses: 
+       #"MashZoneNG/VisualAnalytics/config/license.xml": ${van.license.key.alias}            #LHS: License Locaiton, LHS: key for license imported to cce
+       "MashZoneNG/apache-tomcat/conf/MashZoneNGLicense.xml": ${jbp.license.key.alias} #LHS: License Locaiton, LHS: key for license imported to cce
+    #   "MashZoneNG/apache-tomee-jaxrs/conf/terracotta.key": ${tes.license.key.alias}        #LHS: License Locaiton, LHS: key for license imported to cce
+#    fixes: ${mashzone.fixes}
+    products:
+     presto:                                                                #Business Analytics (MashZoneNG)
+     #VAN:                                                                   #Visual Analytics
+     processAnalysisDashboards:                                             #MashZoneNG Dashboard      
+  GAFix_Dev1Template:
+     fixes:  ${dev1.product.fixes} 
+  GAFixAll_Template:
+     fixes:  ${product.fixes.All}      
 
 provision:
   db:      
@@ -797,12 +893,18 @@ provision:
 
   bpmserver1:
     um:    dev1
-    tc:    dev1
+    DES:   dev1
+    EDS:   dev1
     tdb:   dev1
     bpm:   dev1
+    Apama: dev1
+    MashZone: dev1
     APIGateway: dev2
-    APIPortal: dev2
-#    tools: dev1
+#    APIPortal: dev2
+    tools: devtools
+    GAFixDev1: dev1
+    GAFixDev2: dev2
+    GAFixDevtools: devtools
     
 
   bpmstatelesscluster2:
@@ -885,6 +987,8 @@ nodes:
       host: ${spm.host}
     dev2: 
       host: ${spm.host2}
+    devtools:
+      host: ${spm.hosttools}    
       
   bpmstatelesscluster2:
     dev1: 

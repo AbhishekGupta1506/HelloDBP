@@ -1,4 +1,0 @@
-<DimensionFilter name= "13-9-1294834851499-5" revision= "1" lastRevision= "0" lastRevisionName= "null" revisionTime= "1299503585781" displayName= "SouthRegionFilter" author= "Internal" description= "" userDefined= "true" >
-<Filter dimension="Region" type="WILDCARD" >
-</Filter>
-</DimensionFilter>

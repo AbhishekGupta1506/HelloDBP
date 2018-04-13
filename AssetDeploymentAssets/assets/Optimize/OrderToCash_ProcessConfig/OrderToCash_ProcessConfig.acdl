@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite xmlns:CEP="http://namespaces.softwareag.com/webMethods/CEP" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize" targetNamespace="http://namespaces.softwareag.com/webMethods/Optimize" runtimeVersion="8.2.0.0" displayName="OrderToCash_ProcessConfig" name="OrderToCash_ProcessConfig" xmlns="http://namespaces.softwareag.com/acdl/1.0">
-    <buildInfo value="${buildTimestamp}" name="BuildTimestamp"/>
-    <buildInfo value="${buildVersion}" name="BuildVersion"/>
-    <asset isDeployable="true" displayName="OrderToCash" name="OptimizeProcessConfig.OrderToCashProject%2FOrderToCash">
-        <implementation.generic type="OptimizeProcessConfig"/>
-    </asset>
-</asset_composite>

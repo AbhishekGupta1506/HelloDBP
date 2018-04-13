@@ -6,11 +6,20 @@
 
 	<import file="antcc/main.xml" />
 
-	<target name="up" description="Setup BPMS cluster" depends="sagenvInit2">
+	<!--target name="tuneup" description="Configure CC timeouts">
+	<echo message="ant tuneup called from build.xml at root dir"/>
+		<antcall target="apply">
+			<param name="t" value="templates/cc-tuneup" />
+		</antcall>
+		<antcall target="restartcc" />
+	</target-->	
+	
+	<!--target name="up" description="Setup BPMS cluster" depends="sagenvInit2">
+		<echo message="ant up called from build.xml at root dir"/>
 		<antcall target="apply">
 			<param name="t" value="templates/sag-bpm" />
 		</antcall>
-	</target>
+	</target-->
 
 	<target name="migrate" description="Migrate BPMS cluster" depends="sagenvInit2">
 		<antcall target="sagenv.migrate">

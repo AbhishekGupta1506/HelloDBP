@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><deftemplateModel isDocTypeFieldPos="-1" isDocType="rulesDeployerTests:build" isPackage="RulesDeployerTestPkg" isPort="9442" isHost="localhost:9442" fromISDocType="true" isOrdered="false" isIncludeVariables="true" fromClass="pkgTestRuleProject2.pkgData20Models.DMDM2" isBackchainReactive="false" isSlotSpecific="false" version="10.1.0.0.172">
-    <comments/>
-    <slots>
-        <slot key="/name;1;0" originalFieldPosition="-1" displayType="Text Field" isPasswordType="false" isUnspecifiedAllowed="true" isRequired="true" isMultiSlot="false" position="0" slotName="name">
-            <dataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="stringdatatype" value="0"/>
-        </slot>
-    </slots>
-</deftemplateModel>

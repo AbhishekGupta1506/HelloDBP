@@ -122,6 +122,7 @@ ant migrate -Dt=templateFolder   Migrate using template from source folder
 
 	<target name="up" description="Provision environment using templates" depends="sagccInit" >
 		<!-- default set of templates are all project templates/* -->
+
 		<path id="templates.list.ref">
     		<dirset dir="templates" includes="*" />
   		</path>
@@ -134,6 +135,13 @@ ant migrate -Dt=templateFolder   Migrate using template from source folder
 				</antcall>
 			</sequential>
         </for>
+	</target>
+	
+	<target name="tuneup" description="Configure CC timeouts" depends="sagccInit">
+		<antcall target="apply">
+			<param name="t" value="templates/cc-tuneup" />
+		</antcall>
+		<antcall target="restartcc" />
 	</target>
 
 	<target name="migrate" description="Migrate environment" depends="import" >
