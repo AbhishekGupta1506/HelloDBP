@@ -8,7 +8,7 @@ echo "*****Started tune-up Command Central and Platform Manager*****"
 docker cp ./templates/cc-tuneup/ hellodbp_cc_1:/opt/
 docker exec -i hellodbp_cc_1 /opt/softwareag/CommandCentral/client/bin/sagcc exec templates composite import -i /opt/cc-tuneup/template.yaml 
 docker exec -i hellodbp_cc_1 /opt/softwareag/CommandCentral/client/bin/sagcc exec templates composite apply cc-tuneup
-echo "*****Complated tune-up Command Central and Platform Manager*****"
+echo "*****Completed tune-up Command Central and Platform Manager*****"
 
 echo "*****Provisioning GA products and fixes*****"
 if docker-compose run --rm test; then

@@ -161,7 +161,7 @@ environments:
     
     #FIX
     GAFix_Dev1Template:        [GAFix_Dev1Template]
-    dev1.product.fixes:    [wMFix.TDBServer,wMFix.presto]
+    dev1.product.fixes:    [wMFix.TDBServer,wMFix.presto,wMFix.jdbcAdapter]
     GAFixAll_Template:     [GAFixAll_Template]
     product.fixes.All: ALL
     
